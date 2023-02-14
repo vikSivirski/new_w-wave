@@ -1,0 +1,65 @@
+.hero {
+  padding-top: 35px;
+  padding-bottom: 47px;
+}
+
+.hero__content {
+  padding: 62px 475px 53px 0;
+  padding-right: calc(475 / 1110 * 100%);
+  background-image: url("../img/microphone.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: inherit;
+}
+
+.hero__title {
+  margin: 0;
+  margin-bottom: 14px;
+  font-weight: var(--bold);
+  font-size: 60px;
+  line-height: 100%;
+  color: var(--black);
+}
+
+.hero__title--italic {
+  font-style: italic;
+  font-weight: var(--regular);
+  font-size: 60px;
+  line-height: 100%;
+  color: inherit;
+}
+
+.hero__text {
+  margin: 0;
+  margin-bottom: 45px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--black);
+}
+
+.hero__link {
+  display: inline-block;
+  padding: 25px 54px;
+  font-weight: var(--medium);
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--white);
+  background-color: var(--violet);
+  border-radius: 40px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.hero__link:hover {
+  background-color: var(--lightViolet);
+}
+
+.hero__link:focus-visible {
+  background-color: var(--lightViolet);
+  outline: 2px solid var(--darkViolet);
+  outline-offset: -2px;
+}
+
+.hero__link:active {
+  background-color: var(--darkViolet);
+}

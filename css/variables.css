@@ -1,0 +1,21 @@
+:root {
+  --bold: 700;
+  --medium: 500;
+  --regular: 400;
+  --lightRegular: 300;
+
+  --black: #121723;
+  --lightBlack: #292E39;
+  --darkViolet: #4F28A5;
+  --violet: #6D31EE;
+  --lightViolet: #AA9DFA;
+  --gold: #F0D288;
+  --darkGold: #BB973E;
+  --white: #fff;
+  --lightGray: #E6E8EC;
+  --podcastsGray: #F2F2F2;
+  --whiteGray: #F5F6F7;
+  --darkWhiteGray: #E6E8EC;
+  --menuGray: #D2D5DD;
+  --gray: #A1A6B4;
+}
