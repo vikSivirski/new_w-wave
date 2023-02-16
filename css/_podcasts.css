@@ -69,9 +69,9 @@
   transition: fill 0.2s ease-in-out, stroke 0.2s ease-in-out;
 }
 
-.like--active {
+.podcasts__reaction-btn--active {
   fill: var(--violet);
-  stroke: none;
+  stroke: var(--violet);
 }
 
 .podcasts__reaction-btn-wrap:hover .podcasts__reaction-btn {

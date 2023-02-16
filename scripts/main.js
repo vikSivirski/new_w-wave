@@ -1,4 +1,4 @@
-new Accordion('.subheader__accordion')
+new Accordion('.subheader__accordion');
 
 const burger = document.querySelector('.hamburger');
 const menu = document.querySelector('.header__nav-wrap');
@@ -32,6 +32,7 @@ let listeningsBtn = document.querySelectorAll('.podcasts__play-btn')
 let likeCounter = document.querySelectorAll('.like__counter');
 let shareCounter = document.querySelectorAll('.share__counter');
 let listeningsCounter = document.querySelectorAll('.listenings__counter');
+let reactBtn = document.querySelectorAll('.podcasts__reaction-btn');
 
 function counterLikes() {
   likeCounter.forEach(function(elem) {
@@ -42,16 +43,11 @@ function counterLikes() {
 likeBtn.forEach(function(like) {
   like.addEventListener('click', counterLikes)
 });
-likeBtn.forEach(function (btn) {
-  btn.addEventListener('click', function () {
-    btn.classList.add('like--active')
-  })
-})
 
 function counterShare() {
   shareCounter.forEach(function(elem) {
-      let likes = parseInt(elem.textContent);
-      elem.textContent = likes + 1;
+    let likes = parseInt(elem.textContent);
+    elem.textContent = likes + 1;
   });
 };
 shareBtn.forEach(function(share) {
@@ -60,14 +56,19 @@ shareBtn.forEach(function(share) {
 
 function counterListenings() {
   listeningsCounter.forEach(function(elem) {
-      let likes = parseInt(elem.textContent);
-      elem.textContent = likes + 1;
+    let likes = parseInt(elem.textContent);
+    elem.textContent = likes + 1;
   });
 };
 listeningsBtn.forEach(function(listenings) {
   listenings.addEventListener('click', counterListenings)
 });
 
+reactBtn.forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    btn.classList.add('podcasts__reaction-btn--active')
+  })
+})
 
 
 const moreBtn = document.querySelector('.podcasts__more');
@@ -81,3 +82,12 @@ moreBtn.addEventListener('click', function () {
   });
 
 });
+
+const element = document.querySelector('.broadcast__select');
+const choices = new Choices(element, {
+
+  searchEnabled: false,
+  itemSelectText: '',
+
+});
+
