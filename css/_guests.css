@@ -1,0 +1,219 @@
+.guests {
+  padding-top: 95px;
+  padding-bottom: 95px;
+  background-color: var(--black);
+}
+
+.guests__title {
+  margin-bottom: 12px;
+  color: white;
+}
+
+.guests__enumeration {
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: var(--bold);
+  font-size: 20px;
+  line-height: 150%;
+  color: var(--gray);
+}
+
+.guests__text {
+  max-width: 800px;
+  margin: 0;
+  margin-bottom: 51px;
+  font-size: 20px;
+  line-height: 160%;
+  color: var(--gray);
+}
+
+.guests__content {
+  justify-content: space-between;
+}
+
+.accordion-container {
+  width: calc(730 / 1110 * 100%);
+}
+
+.acordeon__item {
+  width: 100%;
+}
+
+.acordeon__btn:first-child {
+  border-top: 1px solid var(--gray);
+}
+
+.acordeon__title {
+  margin: 0;
+}
+
+.acordeon__btn {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: -1px;
+  padding: 34px 48px 34px 0;
+  font-weight: var(--medium);
+  font-size: 20px;
+  line-height: 20px;
+  color: white;
+  outline: none;
+  border-bottom: 1px solid var(--gray);
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.acordeon__btn::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  background-image: url(../img/acordion-icon.svg);
+  background-position: right center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translateY(-50%) rotate(0);
+  transition-property: background-image, transform;
+  transition-duration: 0.2s;
+  transition: background-image 0.2s, transform 0.5s;
+}
+
+.acordeon__btn:hover {
+  color: var(--lightViolet);
+}
+
+.acordeon__btn:hover::after {
+  background-image: url(../img/acordion-hover.svg);
+}
+
+.acordeon__btn:focus-visible {
+  background-color: var(--lightBlack);
+}
+
+.acordeon__btn:active {
+  color: var(--lightViolet);
+}
+.acordeon__btn:active::after {
+  background-image: url(../img/acordion-active.svg);
+}
+
+.is-active .acordeon__btn::after {
+  transform: translateY(-50%) rotate(540deg);
+}
+
+.guests__item-content-wrap {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  /* padding-right: 34px; */
+  columns: 4;
+  column-gap: 1.8em;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.guests__item-content {
+  overflow: hidden;
+}
+
+.is-active .guests__item-content-wrap  {
+  opacity: 1;
+  visibility: visible;
+}
+
+.is-active,
+.acordion__item {
+  min-height: auto;
+}
+
+.guests__tabs-content {
+  width: calc(350 / 1110 * 100%);
+}
+
+.guests__tabs-item {
+  display: none;
+}
+
+.guests__tabs-item--active {
+  display: block;
+}
+
+.guests__socials-item {
+  margin-right: 30px;
+}
+
+.tab-btn {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: white;
+  transition: color 0.2s ease-in-out;
+}
+
+.tab-btn:hover {
+  color: var(--violet);
+}
+
+.tab-btn--active{
+  color: var(--lightViolet);
+}
+
+.guests__photo-wrap {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.guests__socials {
+  margin-bottom: 12px;
+}
+
+.guests__name {
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: var(--medium);
+  font-size: 20px;
+  line-height: 20px;
+  color: white;
+}
+
+.guests__descr {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 180%;
+  color: var(--gray);
+}
+
+.guests__ether {
+  display: inline-block;
+  padding: 12px 19px;
+  font-weight: var(--medium);
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--lightViolet);
+  border: 2px solid var(--lightViolet);
+  border-radius: 77px;
+  outline: none;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.guests__ether:hover {
+  color: white;
+  background-color: var(--lightViolet);
+}
+
+.guests__ether:focus-visible {
+  color: white;
+  background-color: var(--violet);
+  border-color: var(--violet);
+}
+
+.guests__ether:active {
+  color: white;
+  background-color: var(--darkViolet);
+  border-color: var(--darkViolet);
+}
