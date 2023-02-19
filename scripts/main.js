@@ -108,3 +108,88 @@ btnTabs.forEach(function(element) {
   })
 });
 
+const swiper = new Swiper('.swiper', {
+
+  loop: false,
+  slidesPerView: 4,
+  spaceBetween: 32,
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  breakpoints: {
+
+    1025: {
+      slidesPerView: 4,
+    },
+
+    768: {
+      slidesPerView: 2,
+    },
+
+    611: {
+      slidesPerView: 2,
+    },
+
+    240: {
+      slidesPerView: 2.32,
+
+      spaceBetween: 22,
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        hiddenClass: '.swiper-button-hidden',
+      },
+    }
+
+}});
+
+new JustValidate('.about__form', {
+  rules: {
+    checkbox: {
+      required: true
+    },
+    myField: {
+      required: false
+    },
+    email: {
+      required: true,
+      email: true
+    },
+    name: {
+      required: true,
+      minLength: 3
+    },
+  },
+  messages: {
+    name: {
+      minLength: 'Ошибка',
+      required: 'Это поле обязательно для заполнения',
+    },
+    email:{
+      required: 'Это поле обязательно для заполнения',
+      email: 'Ошибка',
+    } ,
+
+    checkbox: {
+      required: 'Это важно'
+    }
+  },
+
+  submitHandler: function (form, values, ajax) {
+
+    ajax({
+      url: 'https://just-validate-api.herokuapp.com/submit',
+      method: 'POST',
+      data: values,
+      async: true,
+      callback: function(response)  {
+        console.log(response)
+      }
+    });
+  }
+});
+

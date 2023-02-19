@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/choices.min.css">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/choices.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
   <title>W-Wave</title>
@@ -2083,72 +2084,73 @@
               <input type="radio" checked name="radio-btn" class="playlists__checkbox--default visually-hidden">
               <span class="playlists__checkbox--custom"></span>
               <span class="playlists__radio-name">Постпанк</span>
-          </label>
-        </li>
-        <li class="playlists__checkbox-item flex">
-          <label class="playlists__checkbox-wrap">
-            <input type="radio" name="radio-btn" class="playlists__checkbox--default visually-hidden">
-            <span class="playlists__checkbox--custom"></span>
-            <span class="playlists__radio-name">Хардкор</span>
-          </label>
-        </li>
-        <li class="playlists__checkbox-item flex">
-          <label class="playlists__checkbox-wrap">
-            <input type="radio" name="radio-btn" class="playlists__checkbox--default visually-hidden">
-            <span class="playlists__checkbox--custom"></span>
-            <span class="playlists__radio-name">Панк-рок</span>
-          </label>
-        </li>
-        <li class="playlists__checkbox-item flex">
-          <label class="playlists__checkbox-wrap">
-            <input type="radio" name="radio-btn" class="playlists__checkbox--default visually-hidden">
-            <span class="playlists__checkbox--custom"></span>
-            <span class="playlists__radio-name">Рок</span>
-          </label>
-        </li>
-        <li class="playlists__checkbox-item flex">
-          <label class="playlists__checkbox-wrap">
-            <input type="radio" name="radio-btn" class="playlists__checkbox--default visually-hidden">
-            <span class="playlists__checkbox--custom"></span>
-            <span class="playlists__radio-name">Прогрессивный рок</span>
-          </label>
-        </li>
-        <li class="playlists__checkbox-item flex">
-          <label class="playlists__checkbox-wrap">
-            <input type="radio" name="radio-btn" class="playlists__checkbox--default visually-hidden">
-            <span class="playlists__checkbox--custom"></span>
-            <span class="playlists__radio-name">Электронная музыка</span>
-          </label>
-        </li>
-        <li class="playlists__checkbox-item flex">
-          <label class="playlists__checkbox-wrap">
-            <input type="radio" name="radio-btn" class="playlists__checkbox--default visually-hidden">
-            <span class="playlists__checkbox--custom"></span>
-            <span class="playlists__radio-name">Классическая музыка</span>
-          </label>
-        </li>
-        <li class="playlists__checkbox-item flex">
-          <label class="playlists__checkbox-wrap">
-            <input type="radio" name="radio-btn" class="playlists__checkbox--default visually-hidden">
-            <span class="playlists__checkbox--custom"></span>
-            <span class="playlists__radio-name">Звуки природы и шум города</span>
-          </label>
-        </li>
-      </ul>
-      <div class="playlists__warning-wrap">
-        <p class="playlists__warning">
-          Раздел «Плейлисты» может содержать информацию, не предназначенную
-          для несовершеннолетних
-        </p>
-        <p class="playlists__warning-company">© 2021 / W-Wave</p>
-        <svg class="min-age" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-          d="M8.68945 20H7.74023V13.8945C7.74023 13.3867 7.75586 12.9062 7.78711 12.4531C7.70508 12.5352 7.61328 12.6211 7.51172 12.7109C7.41016 12.8008 6.94531 13.1816 6.11719 13.8535L5.60156 13.1855L7.86914 11.4336H8.68945V20ZM14.7891 11.3105C15.5703 11.3105 16.1895 11.4922 16.6465 11.8555C17.1035 12.2188 17.332 12.7207 17.332 13.3613C17.332 13.7832 17.2012 14.168 16.9395 14.5156C16.6777 14.8633 16.2598 15.1797 15.6855 15.4648C16.3809 15.7969 16.875 16.1465 17.168 16.5137C17.4609 16.877 17.6074 17.2988 17.6074 17.7793C17.6074 18.4902 17.3594 19.0586 16.8633 19.4844C16.3672 19.9062 15.6875 20.1172 14.8242 20.1172C13.9102 20.1172 13.207 19.918 12.7148 19.5195C12.2227 19.1172 11.9766 18.5488 11.9766 17.8145C11.9766 16.834 12.5742 16.0703 13.7695 15.5234C13.2305 15.2188 12.8438 14.8906 12.6094 14.5391C12.375 14.1836 12.2578 13.7871 12.2578 13.3496C12.2578 12.7285 12.4863 12.2344 12.9434 11.8672C13.4043 11.4961 14.0195 11.3105 14.7891 11.3105ZM12.9375 17.8379C12.9375 18.3066 13.0996 18.6719 13.4238 18.9336C13.752 19.1953 14.2109 19.3262 14.8008 19.3262C15.3828 19.3262 15.8359 19.1895 16.1602 18.916C16.4844 18.6426 16.6465 18.2676 16.6465 17.791C16.6465 17.4121 16.4941 17.0762 16.1895 16.7832C15.8848 16.4863 15.3535 16.1992 14.5957 15.9219C14.0137 16.1719 13.5918 16.4492 13.3301 16.7539C13.0684 17.0547 12.9375 17.416 12.9375 17.8379ZM14.7773 12.1016C14.2891 12.1016 13.9062 12.2188 13.6289 12.4531C13.3516 12.6875 13.2129 13 13.2129 13.3906C13.2129 13.75 13.3281 14.0586 13.5586 14.3164C13.7891 14.5742 14.2148 14.832 14.8359 15.0898C15.3945 14.8555 15.7891 14.6035 16.0195 14.334C16.2539 14.0645 16.3711 13.75 16.3711 13.3906C16.3711 12.9961 16.2285 12.6836 15.9434 12.4531C15.6621 12.2188 15.2734 12.1016 14.7773 12.1016ZM22.0605 15.3652H24.4746V16.1738H22.0605V18.6699H21.2461V16.1738H18.8438V15.3652H21.2461V12.8574H22.0605V15.3652Z"
-          fill="#A1A6B4" />
-          <rect x="0.5" y="0.5" width="29" height="29" rx="14.5" stroke="#A1A6B4" />
-        </svg>
+            </label>
+          </li>
+          <li class="playlists__checkbox-item flex">
+            <label class="playlists__checkbox-wrap">
+              <input type="radio" name="radio-btn" class="playlists__checkbox--default visually-hidden">
+              <span class="playlists__checkbox--custom"></span>
+              <span class="playlists__radio-name">Хардкор</span>
+            </label>
+          </li>
+          <li class="playlists__checkbox-item flex">
+            <label class="playlists__checkbox-wrap">
+              <input type="radio" name="radio-btn" class="playlists__checkbox--default visually-hidden">
+              <span class="playlists__checkbox--custom"></span>
+              <span class="playlists__radio-name">Панк-рок</span>
+            </label>
+          </li>
+          <li class="playlists__checkbox-item flex">
+            <label class="playlists__checkbox-wrap">
+              <input type="radio" name="radio-btn" class="playlists__checkbox--default visually-hidden">
+              <span class="playlists__checkbox--custom"></span>
+              <span class="playlists__radio-name">Рок</span>
+            </label>
+          </li>
+          <li class="playlists__checkbox-item flex">
+            <label class="playlists__checkbox-wrap">
+              <input type="radio" name="radio-btn" class="playlists__checkbox--default visually-hidden">
+              <span class="playlists__checkbox--custom"></span>
+              <span class="playlists__radio-name">Прогрессивный рок</span>
+            </label>
+          </li>
+          <li class="playlists__checkbox-item flex">
+            <label class="playlists__checkbox-wrap">
+              <input type="radio" name="radio-btn" class="playlists__checkbox--default visually-hidden">
+              <span class="playlists__checkbox--custom"></span>
+              <span class="playlists__radio-name">Электронная музыка</span>
+            </label>
+          </li>
+          <li class="playlists__checkbox-item flex">
+            <label class="playlists__checkbox-wrap">
+              <input type="radio" name="radio-btn" class="playlists__checkbox--default visually-hidden">
+              <span class="playlists__checkbox--custom"></span>
+              <span class="playlists__radio-name">Классическая музыка</span>
+            </label>
+          </li>
+          <li class="playlists__checkbox-item flex">
+            <label class="playlists__checkbox-wrap">
+              <input type="radio" name="radio-btn" class="playlists__checkbox--default visually-hidden">
+              <span class="playlists__checkbox--custom"></span>
+              <span class="playlists__radio-name">Звуки природы и шум города</span>
+            </label>
+          </li>
+        </ul>
+        <div class="playlists__warning-wrap">
+          <p class="playlists__warning">
+            Раздел «Плейлисты» может содержать информацию, не предназначенную
+            для несовершеннолетних
+          </p>
+          <p class="playlists__warning-company">© 2021 / W-Wave</p>
+          <svg class="min-age" width="30" height="30" viewBox="0 0 30 30" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8.68945 20H7.74023V13.8945C7.74023 13.3867 7.75586 12.9062 7.78711 12.4531C7.70508 12.5352 7.61328 12.6211 7.51172 12.7109C7.41016 12.8008 6.94531 13.1816 6.11719 13.8535L5.60156 13.1855L7.86914 11.4336H8.68945V20ZM14.7891 11.3105C15.5703 11.3105 16.1895 11.4922 16.6465 11.8555C17.1035 12.2188 17.332 12.7207 17.332 13.3613C17.332 13.7832 17.2012 14.168 16.9395 14.5156C16.6777 14.8633 16.2598 15.1797 15.6855 15.4648C16.3809 15.7969 16.875 16.1465 17.168 16.5137C17.4609 16.877 17.6074 17.2988 17.6074 17.7793C17.6074 18.4902 17.3594 19.0586 16.8633 19.4844C16.3672 19.9062 15.6875 20.1172 14.8242 20.1172C13.9102 20.1172 13.207 19.918 12.7148 19.5195C12.2227 19.1172 11.9766 18.5488 11.9766 17.8145C11.9766 16.834 12.5742 16.0703 13.7695 15.5234C13.2305 15.2188 12.8438 14.8906 12.6094 14.5391C12.375 14.1836 12.2578 13.7871 12.2578 13.3496C12.2578 12.7285 12.4863 12.2344 12.9434 11.8672C13.4043 11.4961 14.0195 11.3105 14.7891 11.3105ZM12.9375 17.8379C12.9375 18.3066 13.0996 18.6719 13.4238 18.9336C13.752 19.1953 14.2109 19.3262 14.8008 19.3262C15.3828 19.3262 15.8359 19.1895 16.1602 18.916C16.4844 18.6426 16.6465 18.2676 16.6465 17.791C16.6465 17.4121 16.4941 17.0762 16.1895 16.7832C15.8848 16.4863 15.3535 16.1992 14.5957 15.9219C14.0137 16.1719 13.5918 16.4492 13.3301 16.7539C13.0684 17.0547 12.9375 17.416 12.9375 17.8379ZM14.7773 12.1016C14.2891 12.1016 13.9062 12.2188 13.6289 12.4531C13.3516 12.6875 13.2129 13 13.2129 13.3906C13.2129 13.75 13.3281 14.0586 13.5586 14.3164C13.7891 14.5742 14.2148 14.832 14.8359 15.0898C15.3945 14.8555 15.7891 14.6035 16.0195 14.334C16.2539 14.0645 16.3711 13.75 16.3711 13.3906C16.3711 12.9961 16.2285 12.6836 15.9434 12.4531C15.6621 12.2188 15.2734 12.1016 14.7773 12.1016ZM22.0605 15.3652H24.4746V16.1738H22.0605V18.6699H21.2461V16.1738H18.8438V15.3652H21.2461V12.8574H22.0605V15.3652Z"
+              fill="#A1A6B4" />
+            <rect x="0.5" y="0.5" width="29" height="29" rx="14.5" stroke="#A1A6B4" />
+          </svg>
+        </div>
       </div>
-    </div>
       <ul class="playlists__list list-reset flex">
         <li class="playlists__item">
           <picture class="playlists__img-wrap">
@@ -2323,8 +2325,160 @@
     </div>
   </section>
 
+  <section class="market" id="market">
+    <div class="market__container container flex">
+      <picture class="market__img-wrap">
+        <img src="img/market-img.png" alt="" class="market__img">
+      </picture>
+      <div class="market__descr">
+        <h2 class="market__title title">Будь с нами на одной волне!</h2>
+        <div class="market__text-wrap">
+          <p class="market__text">
+            Друзья, рады представить вам продукт нашего производства! Да-да, несмотря на то,
+            что мы только начали свой путь радиовещателей, нам хочется, чтобы вы могли как следует нас расслышать:)
+          </p>
+          <p class="market__text">
+            Итак, встречайте! Портативный радиоприёмник-колонка W-Wave 1.0 xm. Тщательный подбор
+            всех делатей, ручная сборка, качественный звук. Пока доступно только 60 штук в 3 цветах, но мы активно
+            трудимся над новыми партиями и дизайном. Спешите приобрести!
+          </p>
+        </div>
+        <p class="market__price">2 800 ₽</p>
+        <a href="" class="market__link">
+          <svg class="market__link-svg" width="21" height="20" viewBox="0 0 21 20" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_64255_1262)">
+              <path class="market__link-svg-path1"
+                d="M10.5 20C16.0228 20 20.5 15.5228 20.5 9.99998C20.5 4.47714 16.0228 0 10.5 0C4.97724 0 0.5 4.47714 0.5 9.99998C0.5 15.5228 4.97724 20 10.5 20Z" />
+              <path class="market__link-svg-path2"
+                d="M17.4383 4.54391L13.7294 3.17676L8.39558 10.8637L8.92665 7.3751L6.02046 5.68219L0.673828 12.1141C0.924147 13.3858 1.41008 14.5718 2.08375 15.6239L5.27361 11.7711L4.09981 16.2962L7.73695 17.6271L13.1407 9.8464L11.9568 14.2958L14.9032 16.0179L20.5579 10.3174C20.5591 10.2534 20.5598 10.1889 20.5598 10.1246C20.5598 8.78258 20.3016 7.50132 19.8328 6.32896L16.548 9.6538L17.4383 4.54391Z" />
+            </g>
+            <defs>
+              <clipPath id="clip0_64255_1262">
+                <rect x="0.5" width="20" height="20" rx="10" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          Купить на Яндекс.Маркет
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__descr">
+        <h2 class="about__title title">О нас</h2>
+        <h3 class="about__pre-title">Приём-приём! Как слышно? Мы уже в эфире? Отлично, поехали!</h3>
+        <p class="about__text">
+          Друзья, мы будем очень рады, если вы поможете стать нам лучше. Нам важен каждый
+          слушатель, поэтому вы можете поделиться обратной связью о наших предеачах, темах, подборках и вообще обо всём!
+          Это можно сделать либо написав нам в форме ниже, либо кликнув на наши соцсети в подвале сайта. Спасибо!
+          Услышимся!:)
+        </p>
+      </div>
+    </div>
+    <div class="container about__swiper-container">
+      <div class="about__slider-wrap">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <picture class="about__slide-img-wrap">
+                <source media="(max-width: 810px)" srcset="img/gutenberg.jpg">
+                <source media="(max-width: 1024px)" srcset="img/gutenberg1024.jpg">
+                <img class="about__slide-img" src="img/gutenberg.jpg" alt="">
+              </picture>
+              <div class="about__slide-descr">
+                <h3 class="about__slide-name">Дмитрий Гутенберг</h3>
+                <p class="about__slide-text">Эксперт (ну, почти) по всем вопросам (почти)</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <picture class="about__slide-img-wrap">
+                <source media="(max-width: 810px)" srcset="img/vasileva.jpg">
+                <source media="(max-width: 1024px)" srcset="img/vasileva1024.jpg">
+                <img class="about__slide-img" src="img/vasileva.jpg" alt="">
+              </picture>
+              <div class="about__slide-descr">
+                <h3 class="about__slide-name">Анна Васильева</h3>
+                <p class="about__slide-text">Как я здесь оказалась? А главное — зачем?</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <picture class="about__slide-img-wrap">
+                <source media="(max-width: 810px)" srcset="img/dmitrievski.jpg">
+                <source media="(max-width: 1024px)" srcset="img/dmitrievski1024.jpg">
+                <img class="about__slide-img" src="img/dmitrievski.jpg" alt="">
+              </picture>
+              <div class="about__slide-descr">
+                <h3 class="about__slide-name">Пётр Дмитриевский</h3>
+                <p class="about__slide-text">Господа! Внимание! Благодарю за внимание!</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <picture class="about__slide-img-wrap">
+                <source media="(max-width: 810px)" srcset="img/fleganova.jpg">
+                <source media="(max-width: 1024px)" srcset="img/fleganova1024.jpg">
+                <img class="about__slide-img" src="img/fleganova.jpg" alt="">
+              </picture>
+              <div class="about__slide-descr">
+                <h3 class="about__slide-name">Татьяна Флеганова</h3>
+                <p class="about__slide-text">Одна я в пальто стою красивая, а вокруг…</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <picture class="about__slide-img-wrap">
+                <source media="(max-width: 810px)" srcset="img/prokofev.jpg">
+                <source media="(max-width: 1024px)" srcset="img/prokofev1024.jpg">
+                <img class="about__slide-img" src="img/prokofev.jpg" alt="">
+              </picture>
+              <div class="about__slide-descr">
+                <h3 class="about__slide-name">Фёдор Прокопьев</h3>
+                <p class="about__slide-text">Привет! Я фотограф, музыкант, ведущий</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <picture class="about__slide-img-wrap">
+                <source media="(max-width: 810px)" srcset="img/kortneva.jpg">
+                <source media="(max-width: 1024px)" srcset="img/kortneva1024.jpg">
+                <img class="about__slide-img" src="img/kortneva.jpg" alt="">
+              </picture>
+              <div class="about__slide-descr">
+                <h3 class="about__slide-name">Светлана Кортнева</h3>
+                <p class="about__slide-text">Художник-оформитель. Оформляю</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+    <div class="container">
+      <form class="about__form flex" action="">
+        <textarea class="about__textarea" placeholder="Что скажете?"></textarea>
+        <div class="about__input-wrap">
+          <input type="text" class="about__input about__input--name" placeholder="Имя" data-validate-field="name">
+        </div>
+        <div class="about__input-wrap">
+          <input type="email" class="about__input about__input--mail" placeholder="Email" data-validate-field="email">
+        </div>
+        <div class="about__form-send flex">
+          <button type="submit" class="about__form-btn btn-reset">Отправить</button>
+          <label class="about__form-label">
+            <input type="checkbox" class="about__form-chekbox visually-hidden" data-validate-field="checkbox">Согласен
+            на обработку персональных данных
+            <span class="custom-checkbox"></span>
+          </label>
+        </div>
+      </form>
+    </div>
+  </section>
+
   <script src="scripts/choices.min.js"></script>
   <script src="scripts/accordion.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="scripts/just-validate.min.js"></script>
   <script src="scripts/main.js"></script>
 </body>
 

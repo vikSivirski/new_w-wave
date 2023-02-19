@@ -1,0 +1,122 @@
+.market {
+  padding-top: 95px;
+  padding-bottom: 130px;
+  background-color: var(--lightBlack);
+}
+
+.market__container {
+  justify-content: space-between;
+}
+
+.market__img-wrap {
+  position: relative;
+  display: block;
+  margin-top: 5px;
+  width: calc(640 / 1110 * 100%);
+  max-height: 562px;
+}
+
+.market__img-wrap::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 155px;
+  height: 155px;
+  background-image: url("../img/market_new.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.market__descr {
+  width: calc(445 / 1110 * 100%);
+}
+
+.market__title {
+  padding-bottom: 29px;
+  margin-bottom: 19px;
+  color: var(--gold);
+}
+
+.market__text {
+  margin: 0;
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 180%;
+  color: white;
+}
+
+.market__text:last-child {
+  margin-bottom: 30px;
+}
+
+.market__price {
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: var(--medium);
+  font-size: 30px;
+  line-height: 30px;
+  color: white;
+}
+
+.market__link {
+  display: inline-block;
+  padding: 22px 13px;
+  font-weight: var(--medium);
+  font-size: 20px;
+  line-height: 100%;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+  border-radius: 100px;
+  outline: none;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.market__link:hover {
+  background-color: var(--gold);
+  color: var(--black);
+}
+
+.market__link:focus-visible {
+  background-color: var(--darkGold);
+  color: var(--black);
+}
+
+.market__link:active {
+  border-color: var(--darkGold);
+  background-color: var(--darkGold);
+  color: var(--black);
+}
+
+
+.market__link-svg-path1 {
+  fill: var(--gold);
+  transition: fill 0.2s ease-in-out;
+}
+
+.market__link-svg-path2 {
+  fill: var(--black);
+  transition: fill 0.2s ease-in-out;
+}
+
+.market__link:hover .market__link-svg-path1{
+  fill: var(--black);
+}
+
+.market__link:hover .market__link-svg-path2{
+  fill: var(--gold);
+}
+
+.market__link:active .market__link-svg-path1 {
+  fill: var(--black);
+}
+
+.market__link:active .market__link-svg-path2 {
+  fill: var(--darkGold);
+}
+
+.market__link-svg {
+  vertical-align: middle;
+  width: 21px;
+  height: 20px;
+}
