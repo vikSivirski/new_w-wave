@@ -77,3 +77,7 @@ input::-webkit-search-results-decoration {
   line-height: 100%;
   color: var(--black);
 }
+
+.stop-scroll {
+  overflow: hidden;
+}

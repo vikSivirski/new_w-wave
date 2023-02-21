@@ -1,5 +1,5 @@
 .about {
-  padding-top: 94px;
+  padding-top: 98px;
   padding-bottom: 92px;
   background-color: var(--black);
 }
@@ -70,6 +70,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   opacity: 1;
+  outline:none;
   transition: opacity 0.2s ease-in-out;
 }
 
@@ -83,6 +84,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   opacity: 1;
+  outline: none;
   transition: opacity 0.2s ease-in-out;
 }
 
@@ -151,11 +153,11 @@
 
 .about__input-wrap {
   position: relative;
-  width: 100%;
+  width: calc((100% - 30px) / 2);
 }
 
 .about__input {
-  width: calc(445 / 920 * 100%);
+  width: 100%;
   padding: 25px 32px;
   margin-bottom: 30px;
   font-size: 20px;

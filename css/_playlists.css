@@ -87,6 +87,7 @@
   width: calc(160 / 730 * 100%);
   margin-bottom: 30px;
   flex-grow: 0;
+  outline: none;
 }
 
 .playlists__img-wrap {
@@ -143,8 +144,18 @@
   opacity: 1;
 }
 
+.playlists__item:focus-visible .playlists__item-content {
+  background-color: var(--lightViolet);
+  border-color: var(--lightViolet);
+}
+
+.playlists__item:focus-visible .playlists__band,
+.playlists__item:focus-visible .playlists__band-album {
+  color: white;
+}
+
 .playlists__item:active .playlists__item-content {
-  background-color: var(--darktViolet);
+  background-color: var(--darkViolet);
   border-color: var(--darkViolet);
 }
 

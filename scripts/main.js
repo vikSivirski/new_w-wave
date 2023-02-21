@@ -3,13 +3,40 @@ new Accordion('.guests__accordion');
 
 const burger = document.querySelector('.hamburger');
 const menu = document.querySelector('.header__nav-wrap');
+const menuLinks = document.querySelectorAll('.header__item')
 
 burger.addEventListener('click', function() {
 
   burger.classList.toggle('is-active');
+
+  if (burger.classList.contains('is-active')) {
+    menu.style.transition = 'transform 0.4s ease-in-out'
+  }
+
   menu.classList.toggle('header__nav--active');
+  document.body.classList.toggle('stop-scroll');
 
 });
+
+menu.addEventListener('transitionend', function() {
+
+  if(!menu.classList.contains('header__nav--active')) {
+    menu.removeAttribute('style');
+  }
+
+})
+
+menuLinks.forEach(function(headerLink) {
+
+  headerLink.addEventListener('click', function() {
+    burger.classList.remove('is-active');
+    menu.classList.remove('header__nav--active');
+    document.body.classList.remove('stop-scroll');
+  })
+
+})
+
+
 
 const searchBtn = document.querySelector('.header__search-btn ');
 const searchForm = document.querySelector('.search-form');
@@ -127,6 +154,7 @@ const swiper = new Swiper('.swiper', {
 
     768: {
       slidesPerView: 2,
+      spaceBetween: 30,
     },
 
     611: {

@@ -242,7 +242,7 @@
   background-color: var(--lightGray);
 }
 
-.subheder__audio-descr {
+.subheader__audio-descr {
   flex-direction: column;
 }
 
@@ -254,7 +254,7 @@
   display: none;
 }
 
-.subheader__menu--media {
+.subheader-menu--media {
   display: none;
 }
 
