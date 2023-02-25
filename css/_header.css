@@ -19,7 +19,9 @@
   align-items: center;
 }
 
-.header_logo {
+.header__logo {
+  display: inline-block;
+  max-width: 160px;
   height: 20px;
   outline: none;
 }
@@ -77,6 +79,7 @@
 }
 
 .header__search-btn {
+  max-width: 24px;
   vertical-align: middle;
   height: 24px;
   margin-right: 20px;

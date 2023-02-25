@@ -62,6 +62,7 @@
 }
 
 .podcasts__reaction-btn {
+  max-width: 15px;
   margin-right: 6px;
   fill: none;
   stroke: var(--gray);
@@ -156,6 +157,7 @@
 }
 
 .podcasts__play-btn {
+  max-width: 48px;
   stroke: var(--gray);
   fill: none;
   outline: none;

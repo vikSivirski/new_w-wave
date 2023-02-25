@@ -187,6 +187,7 @@ const swiper = new Swiper('.swiper', {
 
 }});
 
+
 new JustValidate('.about__form', {
   rules: {
     checkbox: {
@@ -220,9 +221,10 @@ new JustValidate('.about__form', {
   },
 
   submitHandler: function (form, values, ajax) {
+    // const form = document.querySelector('.about__form');
 
     ajax({
-      url: 'https://just-validate-api.herokuapp.com/submit',
+      url: 'mail.php',
       method: 'POST',
       data: values,
       async: true,

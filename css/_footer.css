@@ -24,6 +24,10 @@
   margin-right: 21px;
 }
 
+.footer__socials-item {
+  max-width: 24px;
+}
+
 .footer__socials-link {
   max-width: 24px;
   height: 100%;
