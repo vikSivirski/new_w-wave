@@ -88,6 +88,11 @@
   padding-top: 0px;
 }
 
+.is-focused .choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+  background-color: #aa9dfa;
+  color: #121723;
+}
+
 .choices[data-type*=select-one]::after {
   content: "";
   position: absolute;

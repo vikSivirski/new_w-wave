@@ -17,8 +17,8 @@
   <header class="header">
     <div class="container header__container flex">
       <div class="header__logo-block">
-        <a href="#" class="header__logo"><svg width="160" height="20" viewBox="0 0 160 20" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
+        <a href="#" class="header__logo" aria-label="Логотип W-Wave, ссылка на главную страницу"><svg width="160"
+            height="20" viewBox="0 0 160 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M29.2408 0.331491V11.7403C29.2408 14.4291 28.5054 16.4825 27.0345 17.9006C25.5636 19.3002 23.4783 20 20.7786 20C19.438 20 18.2371 19.8066 17.1758 19.4199C16.1332 19.0331 15.2767 18.4899 14.6064 17.7901C13.9176 18.4899 13.0518 19.0331 12.0091 19.4199C10.9665 19.8066 9.78418 20 8.46224 20C5.76252 20 3.67721 19.3002 2.20633 17.9006C0.735443 16.4825 0 14.4291 0 11.7403V0.331491H4.52437V11.6022C4.52437 13.1676 4.8502 14.3278 5.50186 15.0829C6.15351 15.8195 7.12169 16.1878 8.40639 16.1878C11.0316 16.1878 12.3443 14.6593 12.3443 11.6022V0.331491H16.8686V11.6022C16.8686 14.6593 18.1906 16.1878 20.8344 16.1878C23.4038 16.1878 24.6885 14.6593 24.6885 11.6022V0.331491H29.2408Z"
               fill="#292E39" />
@@ -39,7 +39,8 @@
               fill="#6D31EE" />
           </svg>
         </a>
-        <button class="header__account-btn header__account-btn--media btn-reset">Вход</button>
+        <button class="header__account-btn header__account-btn--media btn-reset"
+          aria-label="Кнопка входа в учетную запись">Вход</button>
       </div>
       <div class="header__content flex">
         <button class="hamburger hamburger--spin btn-reset" type="button">
@@ -113,7 +114,7 @@
         <div class="header__account">
           <form action="#" class="search-form flex">
             <input type="search" class="search-form__input" placeholder="Поиск по сайту">
-            <button class="search-form__btn btn-reset">
+            <button class="search-form__btn btn-reset" aria-label="Поиск по сайту">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
@@ -122,7 +123,7 @@
               </svg>
             </button>
           </form>
-          <button class="header__search-btn btn-reset">
+          <button class="header__search-btn btn-reset" aria-label="Поиск по сайту">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
@@ -130,7 +131,7 @@
               <path d="M21 21L16.65 16.65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </button>
-          <button class="header__account-btn btn-reset">Вход</button>
+          <button class="header__account-btn btn-reset" aria-label="Вход в учетную запись">Вход</button>
         </div>
       </div>
     </div>
@@ -171,11 +172,25 @@
           </ul>
           <ul class="subheader__audio list-reset flex">
             <li class="subheader__audio-item flex">
-              <button class="subheader__audio-btn btn-reset">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <button class="subheader__audio-btn btn-reset" aria-label="Ранее в эфире Музыка слушать эфир">
+                <svg class="subheader__audio-btn-svg subheader__audio-btn-svg--off" width="20" height="20"
+                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path
-                    d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z"
-                    fill="#A1A6B4" />
+                    d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z" />
+                </svg>
+                <svg class="subheader__audio-btn-svg subheader__audio-btn-svg--on" width="24" height="24"
+                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_24531_3491)">
+                    <path
+                      d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z" />
+                    <rect x="9" y="8" width="2" height="8" rx="1" fill="white" />
+                    <rect x="13" y="8" width="2" height="8" rx="1" fill="white" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_24531_3491">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
                 </svg>
               </button>
               <div class="subheader__audio-descr flex">
@@ -184,11 +199,25 @@
               </div>
             </li>
             <li class="subheader__audio-item flex">
-              <button class="subheader__audio-btn btn-reset">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <button class="subheader__audio-btn btn-reset" aria-label="Сейчас в эфире подкаст Как так? слушать эфир">
+                <svg class="subheader__audio-btn-svg subheader__audio-btn-svg--off su" width="20" height="20"
+                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path
-                    d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z"
-                    fill="#A1A6B4" />
+                    d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z" />
+                </svg>
+                <svg class="subheader__audio-btn-svg subheader__audio-btn-svg--on" width="24" height="24"
+                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_24531_3491)">
+                    <path
+                      d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z" />
+                    <rect x="9" y="8" width="2" height="8" rx="1" fill="white" />
+                    <rect x="13" y="8" width="2" height="8" rx="1" fill="white" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_24531_3491">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
                 </svg>
               </button>
               <div class="subheader__audio-descr flex">
@@ -198,10 +227,24 @@
             </li>
           </ul>
           <button class="subheader__audio-btn subheader__audio-btn--media btn-reset">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="subheader__audio-btn-svg subheader__audio-btn-svg--off" width="20" height="20"
+              viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <path
-                d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z"
-                fill="#A1A6B4" />
+                d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z" />
+            </svg>
+            <svg class="subheader__audio-btn-svg subheader__audio-btn-svg--on" width="24" height="24"
+              viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_24531_3491)">
+                <path
+                  d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z" />
+                <rect x="9" y="8" width="2" height="8" rx="1" fill="white" />
+                <rect x="13" y="8" width="2" height="8" rx="1" fill="white" />
+              </g>
+              <defs>
+                <clipPath id="clip0_24531_3491">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
             </svg>
           </button>
           <div class="subheader__accordion accordion-container">
@@ -221,10 +264,24 @@
                 <ul class="subheader__audio-acordion list-reset ac-text flex">
                   <li class="subheader__audio-item flex">
                     <button class="subheader__audio-btn btn-reset">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg class="subheader__audio-btn-svg subheader__audio-btn-svg--off" width="20" height="20"
+                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path
-                          d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z"
-                          fill="#A1A6B4" />
+                          d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z" />
+                      </svg>
+                      <svg class="subheader__audio-btn-svg subheader__audio-btn-svg--on" width="24" height="24"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_24531_3491)">
+                          <path
+                            d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z" />
+                          <rect x="9" y="8" width="2" height="8" rx="1" fill="white" />
+                          <rect x="13" y="8" width="2" height="8" rx="1" fill="white" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_24531_3491">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
                       </svg>
                     </button>
                     <div class="subheader__audio-descr flex">
@@ -234,10 +291,24 @@
                   </li>
                   <li class="subheader__audio-item flex">
                     <button class="subheader__audio-btn btn-reset">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg class="subheader__audio-btn-svg subheader__audio-btn-svg--off" width="20" height="20"
+                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path
-                          d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z"
-                          fill="#A1A6B4" />
+                          d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z" />
+                      </svg>
+                      <svg class="subheader__audio-btn-svg subheader__audio-btn-svg--on" width="24" height="24"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_24531_3491)">
+                          <path
+                            d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z" />
+                          <rect x="9" y="8" width="2" height="8" rx="1" fill="white" />
+                          <rect x="13" y="8" width="2" height="8" rx="1" fill="white" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_24531_3491">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
                       </svg>
                     </button>
                     <div class="subheader__audio-descr flex">
@@ -293,18 +364,26 @@
                   <h3 class="podcasts__name">Европа. XIX век</h3>
                   <p class="podcasts__autor">Дмитрий Гутенберг</p>
                 </div>
-                <button class="podcasts__play-btn btn-reset">
-                  <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <button class="podcasts__play-btn btn-reset" aria-label="Слушать подкаст Европа 19ый век"
+                  data-path="one">
+                  <svg class="podcasts__play-btn-svg podcasts__play-btn-svg--off podcasts__play-btn-svg--active"
+                    width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke-width="2" />
                     <path
                       d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z"
                       fill="#A1A6B4" />
                   </svg>
+                  <svg data-target="one" class="podcasts__play-btn-svg podcasts__play-btn-svg--on" width="48"
+                    height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
+                    <rect x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4" />
+                    <rect x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4" />
+                  </svg>
                 </button>
               </div>
               <div class="podcasts__reaction flex">
-                <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <div tabindex="-1" class="podcasts__reaction-btn btn-reset listenings">
+                <div class="podcasts__reaction-btn-wrap flex">
+                  <div class="podcasts__reaction-btn btn-reset listenings">
                     <svg width="10" height="13" viewBox="0 0 10 13" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M1.3 11.331L8.29606 6.5L1.3 1.66897V11.331ZM0.666238 1.23131L0.669532 1.23361L0.666238 1.23131ZM1.41031 12.8347L9.64301 7.14971C10.119 6.82485 10.119 6.17514 9.64301 5.85029L1.41031 0.165315C0.828559 -0.240754 0 0.149072 0 0.815026V12.185C0 12.8509 0.828559 13.2408 1.41031 12.8347Z" />
@@ -313,7 +392,7 @@
                   <span class="listenings-counter podcasts__reaction-counters">0</span>
                 </div>
                 <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset like">
+                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset like" aria-label="лайк">
                     <svg width="14" height="13" viewBox="0 0 13 12" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M6.5 12L5.5575 11.1368C2.21 8.08283 0 6.06866 0 3.59673C0 1.58256 1.573 0 3.575 0C4.706 0 5.7915 0.5297 6.5 1.36676C7.2085 0.5297 8.294 0 9.425 0C11.427 0 13 1.58256 13 3.59673C13 6.06866 10.79 8.08283 7.4425 11.1433L6.5 12Z" />
@@ -322,7 +401,7 @@
                   <span class="like-counter podcasts__reaction-counters">0</span>
                 </div>
                 <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset share">
+                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset share" aria-label="поделиться">
                     <svg width="12" height="13" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M10 9.18876C9.49333 9.18876 9.04 9.38454 8.69333 9.69127L3.94 6.98293C3.97333 6.83283 4 6.68273 4 6.5261C4 6.36948 3.97333 6.21938 3.94 6.06928L8.64 3.38705C9 3.71335 9.47333 3.91566 10 3.91566C11.1067 3.91566 12 3.04116 12 1.95783C12 0.874498 11.1067 0 10 0C8.89333 0 8 0.874498 8 1.95783C8 2.11446 8.02667 2.26456 8.06 2.41466L3.36 5.09689C3 4.77058 2.52667 4.56827 2 4.56827C0.893333 4.56827 0 5.44277 0 6.5261C0 7.60944 0.893333 8.48394 2 8.48394C2.52667 8.48394 3 8.28163 3.36 7.95532L8.10667 10.6702C8.07333 10.8072 8.05333 10.9508 8.05333 11.0944C8.05333 12.1451 8.92667 13 10 13C11.0733 13 11.9467 12.1451 11.9467 11.0944C11.9467 10.0437 11.0733 9.18876 10 9.18876Z" />
@@ -347,18 +426,25 @@
                   <h3 class="podcasts__name">О музыке</h3>
                   <p class="podcasts__autor">Дмитрий Гутенберг</p>
                 </div>
-                <button class="podcasts__play-btn btn-reset">
-                  <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <button class="podcasts__play-btn btn-reset" aria-label="Слушать подкаст о музыке" data-path="two">
+                  <svg class="podcasts__play-btn-svg podcasts__play-btn-svg--off podcasts__play-btn-svg--active"
+                    width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke-width="2" />
                     <path
                       d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z"
                       fill="#A1A6B4" />
                   </svg>
+                  <svg data-target="two" class="podcasts__play-btn-svg podcasts__play-btn-svg--on" width="48"
+                    height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
+                    <rect x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4" />
+                    <rect x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4" />
+                  </svg>
                 </button>
               </div>
               <div class="podcasts__reaction flex">
-                <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <div tabindex="-1" class="podcasts__reaction-btn btn-reset listenings">
+                <div class="podcasts__reaction-btn-wrap flex">
+                  <div class="podcasts__reaction-btn btn-reset listenings">
                     <svg width="10" height="13" viewBox="0 0 10 13" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M1.3 11.331L8.29606 6.5L1.3 1.66897V11.331ZM0.666238 1.23131L0.669532 1.23361L0.666238 1.23131ZM1.41031 12.8347L9.64301 7.14971C10.119 6.82485 10.119 6.17514 9.64301 5.85029L1.41031 0.165315C0.828559 -0.240754 0 0.149072 0 0.815026V12.185C0 12.8509 0.828559 13.2408 1.41031 12.8347Z" />
@@ -367,7 +453,7 @@
                   <span class="listenings-counter podcasts__reaction-counters">0</span>
                 </div>
                 <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset like">
+                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset like" aria-label="лайк">
                     <svg width="14" height="13" viewBox="0 0 13 12" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M6.5 12L5.5575 11.1368C2.21 8.08283 0 6.06866 0 3.59673C0 1.58256 1.573 0 3.575 0C4.706 0 5.7915 0.5297 6.5 1.36676C7.2085 0.5297 8.294 0 9.425 0C11.427 0 13 1.58256 13 3.59673C13 6.06866 10.79 8.08283 7.4425 11.1433L6.5 12Z" />
@@ -376,7 +462,7 @@
                   <span class="like-counter podcasts__reaction-counters">0</span>
                 </div>
                 <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset share">
+                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset share" aria-label="поделиться">
                     <svg width="12" height="13" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M10 9.18876C9.49333 9.18876 9.04 9.38454 8.69333 9.69127L3.94 6.98293C3.97333 6.83283 4 6.68273 4 6.5261C4 6.36948 3.97333 6.21938 3.94 6.06928L8.64 3.38705C9 3.71335 9.47333 3.91566 10 3.91566C11.1067 3.91566 12 3.04116 12 1.95783C12 0.874498 11.1067 0 10 0C8.89333 0 8 0.874498 8 1.95783C8 2.11446 8.02667 2.26456 8.06 2.41466L3.36 5.09689C3 4.77058 2.52667 4.56827 2 4.56827C0.893333 4.56827 0 5.44277 0 6.5261C0 7.60944 0.893333 8.48394 2 8.48394C2.52667 8.48394 3 8.28163 3.36 7.95532L8.10667 10.6702C8.07333 10.8072 8.05333 10.9508 8.05333 11.0944C8.05333 12.1451 8.92667 13 10 13C11.0733 13 11.9467 12.1451 11.9467 11.0944C11.9467 10.0437 11.0733 9.18876 10 9.18876Z" />
@@ -401,18 +487,26 @@
                   <h3 class="podcasts__name">Люди сегодня</h3>
                   <p class="podcasts__autor">Анна Васильева</p>
                 </div>
-                <button class="podcasts__play-btn btn-reset">
-                  <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <button class="podcasts__play-btn btn-reset" aria-label="Слушать подкаст люди сегодня"
+                  data-path="three">
+                  <svg class="podcasts__play-btn-svg podcasts__play-btn-svg--off podcasts__play-btn-svg--active"
+                    width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke-width="2" />
                     <path
                       d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z"
                       fill="#A1A6B4" />
                   </svg>
+                  <svg data-target="three" class="podcasts__play-btn-svg podcasts__play-btn-svg--on" width="48"
+                    height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
+                    <rect x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4" />
+                    <rect x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4" />
+                  </svg>
                 </button>
               </div>
               <div class="podcasts__reaction flex">
-                <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <div tabindex="-1" class="podcasts__reaction-btn btn-reset listenings">
+                <div class="podcasts__reaction-btn-wrap flex">
+                  <div class="podcasts__reaction-btn btn-reset listenings">
                     <svg width="10" height="13" viewBox="0 0 10 13" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M1.3 11.331L8.29606 6.5L1.3 1.66897V11.331ZM0.666238 1.23131L0.669532 1.23361L0.666238 1.23131ZM1.41031 12.8347L9.64301 7.14971C10.119 6.82485 10.119 6.17514 9.64301 5.85029L1.41031 0.165315C0.828559 -0.240754 0 0.149072 0 0.815026V12.185C0 12.8509 0.828559 13.2408 1.41031 12.8347Z" />
@@ -421,7 +515,7 @@
                   <span class="listenings-counter podcasts__reaction-counters">0</span>
                 </div>
                 <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset like">
+                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset like" aria-label="лайк">
                     <svg width="14" height="13" viewBox="0 0 13 12" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M6.5 12L5.5575 11.1368C2.21 8.08283 0 6.06866 0 3.59673C0 1.58256 1.573 0 3.575 0C4.706 0 5.7915 0.5297 6.5 1.36676C7.2085 0.5297 8.294 0 9.425 0C11.427 0 13 1.58256 13 3.59673C13 6.06866 10.79 8.08283 7.4425 11.1433L6.5 12Z" />
@@ -430,7 +524,7 @@
                   <span class="like-counter podcasts__reaction-counters">0</span>
                 </div>
                 <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset share">
+                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset share" aria-label="поделиться">
                     <svg width="12" height="13" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M10 9.18876C9.49333 9.18876 9.04 9.38454 8.69333 9.69127L3.94 6.98293C3.97333 6.83283 4 6.68273 4 6.5261C4 6.36948 3.97333 6.21938 3.94 6.06928L8.64 3.38705C9 3.71335 9.47333 3.91566 10 3.91566C11.1067 3.91566 12 3.04116 12 1.95783C12 0.874498 11.1067 0 10 0C8.89333 0 8 0.874498 8 1.95783C8 2.11446 8.02667 2.26456 8.06 2.41466L3.36 5.09689C3 4.77058 2.52667 4.56827 2 4.56827C0.893333 4.56827 0 5.44277 0 6.5261C0 7.60944 0.893333 8.48394 2 8.48394C2.52667 8.48394 3 8.28163 3.36 7.95532L8.10667 10.6702C8.07333 10.8072 8.05333 10.9508 8.05333 11.0944C8.05333 12.1451 8.92667 13 10 13C11.0733 13 11.9467 12.1451 11.9467 11.0944C11.9467 10.0437 11.0733 9.18876 10 9.18876Z" />
@@ -455,18 +549,26 @@
                   <h3 class="podcasts__name">Хэллоу, Африка!</h3>
                   <p class="podcasts__autor">Пётр Дмитриевский</p>
                 </div>
-                <button class="podcasts__play-btn btn-reset">
-                  <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <button class="podcasts__play-btn btn-reset" aria-label="Слушать подкаст хэллоу Африка"
+                  data-path="four">
+                  <svg class="podcasts__play-btn-svg podcasts__play-btn-svg--off podcasts__play-btn-svg--active"
+                    width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke-width="2" />
                     <path
                       d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z"
                       fill="#A1A6B4" />
                   </svg>
+                  <svg data-target="four" class="podcasts__play-btn-svg podcasts__play-btn-svg--on" width="48"
+                    height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
+                    <rect x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4" />
+                    <rect x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4" />
+                  </svg>
                 </button>
               </div>
               <div class="podcasts__reaction flex">
-                <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <div tabindex="-1" class="podcasts__reaction-btn btn-reset listenings">
+                <div class="podcasts__reaction-btn-wrap flex">
+                  <div class="podcasts__reaction-btn btn-reset listenings">
                     <svg width="10" height="13" viewBox="0 0 10 13" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M1.3 11.331L8.29606 6.5L1.3 1.66897V11.331ZM0.666238 1.23131L0.669532 1.23361L0.666238 1.23131ZM1.41031 12.8347L9.64301 7.14971C10.119 6.82485 10.119 6.17514 9.64301 5.85029L1.41031 0.165315C0.828559 -0.240754 0 0.149072 0 0.815026V12.185C0 12.8509 0.828559 13.2408 1.41031 12.8347Z" />
@@ -475,7 +577,7 @@
                   <span class="listenings-counter podcasts__reaction-counters">0</span>
                 </div>
                 <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset like">
+                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset like" aria-label="лайк">
                     <svg width="14" height="13" viewBox="0 0 13 12" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M6.5 12L5.5575 11.1368C2.21 8.08283 0 6.06866 0 3.59673C0 1.58256 1.573 0 3.575 0C4.706 0 5.7915 0.5297 6.5 1.36676C7.2085 0.5297 8.294 0 9.425 0C11.427 0 13 1.58256 13 3.59673C13 6.06866 10.79 8.08283 7.4425 11.1433L6.5 12Z" />
@@ -484,7 +586,7 @@
                   <span class="like-counter podcasts__reaction-counters">0</span>
                 </div>
                 <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset share">
+                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset share" aria-label="поделиться">
                     <svg width="12" height="13" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M10 9.18876C9.49333 9.18876 9.04 9.38454 8.69333 9.69127L3.94 6.98293C3.97333 6.83283 4 6.68273 4 6.5261C4 6.36948 3.97333 6.21938 3.94 6.06928L8.64 3.38705C9 3.71335 9.47333 3.91566 10 3.91566C11.1067 3.91566 12 3.04116 12 1.95783C12 0.874498 11.1067 0 10 0C8.89333 0 8 0.874498 8 1.95783C8 2.11446 8.02667 2.26456 8.06 2.41466L3.36 5.09689C3 4.77058 2.52667 4.56827 2 4.56827C0.893333 4.56827 0 5.44277 0 6.5261C0 7.60944 0.893333 8.48394 2 8.48394C2.52667 8.48394 3 8.28163 3.36 7.95532L8.10667 10.6702C8.07333 10.8072 8.05333 10.9508 8.05333 11.0944C8.05333 12.1451 8.92667 13 10 13C11.0733 13 11.9467 12.1451 11.9467 11.0944C11.9467 10.0437 11.0733 9.18876 10 9.18876Z" />
@@ -509,18 +611,25 @@
                   <h3 class="podcasts__name">Обо всём</h3>
                   <p class="podcasts__autor">Пётр Дмитриевский</p>
                 </div>
-                <button class="podcasts__play-btn btn-reset">
-                  <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <button class="podcasts__play-btn btn-reset" aria-label="Слушать подкаст обо всем" data-path="five">
+                  <svg class="podcasts__play-btn-svg podcasts__play-btn-svg--off podcasts__play-btn-svg--active"
+                    width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke-width="2" />
                     <path
                       d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z"
                       fill="#A1A6B4" />
                   </svg>
+                  <svg data-target="five" class="podcasts__play-btn-svg podcasts__play-btn-svg--on" width="48"
+                    height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
+                    <rect x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4" />
+                    <rect x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4" />
+                  </svg>
                 </button>
               </div>
               <div class="podcasts__reaction flex">
-                <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <div tabindex="-1" class="podcasts__reaction-btn btn-reset listenings">
+                <div class="podcasts__reaction-btn-wrap flex">
+                  <div class="podcasts__reaction-btn btn-reset listenings">
                     <svg width="10" height="13" viewBox="0 0 10 13" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M1.3 11.331L8.29606 6.5L1.3 1.66897V11.331ZM0.666238 1.23131L0.669532 1.23361L0.666238 1.23131ZM1.41031 12.8347L9.64301 7.14971C10.119 6.82485 10.119 6.17514 9.64301 5.85029L1.41031 0.165315C0.828559 -0.240754 0 0.149072 0 0.815026V12.185C0 12.8509 0.828559 13.2408 1.41031 12.8347Z" />
@@ -529,7 +638,7 @@
                   <span class="listenings-counter podcasts__reaction-counters">0</span>
                 </div>
                 <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset like">
+                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset like" aria-label="лайк">
                     <svg width="14" height="13" viewBox="0 0 13 12" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M6.5 12L5.5575 11.1368C2.21 8.08283 0 6.06866 0 3.59673C0 1.58256 1.573 0 3.575 0C4.706 0 5.7915 0.5297 6.5 1.36676C7.2085 0.5297 8.294 0 9.425 0C11.427 0 13 1.58256 13 3.59673C13 6.06866 10.79 8.08283 7.4425 11.1433L6.5 12Z" />
@@ -538,7 +647,7 @@
                   <span class="like-counter podcasts__reaction-counters">0</span>
                 </div>
                 <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset share">
+                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset share" aria-label="поделиться">
                     <svg width="12" height="13" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M10 9.18876C9.49333 9.18876 9.04 9.38454 8.69333 9.69127L3.94 6.98293C3.97333 6.83283 4 6.68273 4 6.5261C4 6.36948 3.97333 6.21938 3.94 6.06928L8.64 3.38705C9 3.71335 9.47333 3.91566 10 3.91566C11.1067 3.91566 12 3.04116 12 1.95783C12 0.874498 11.1067 0 10 0C8.89333 0 8 0.874498 8 1.95783C8 2.11446 8.02667 2.26456 8.06 2.41466L3.36 5.09689C3 4.77058 2.52667 4.56827 2 4.56827C0.893333 4.56827 0 5.44277 0 6.5261C0 7.60944 0.893333 8.48394 2 8.48394C2.52667 8.48394 3 8.28163 3.36 7.95532L8.10667 10.6702C8.07333 10.8072 8.05333 10.9508 8.05333 11.0944C8.05333 12.1451 8.92667 13 10 13C11.0733 13 11.9467 12.1451 11.9467 11.0944C11.9467 10.0437 11.0733 9.18876 10 9.18876Z" />
@@ -563,18 +672,25 @@
                   <h3 class="podcasts__name">Физика цвета</h3>
                   <p class="podcasts__autor">Татьяна Флеганова</p>
                 </div>
-                <button class="podcasts__play-btn btn-reset">
-                  <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <button class="podcasts__play-btn btn-reset" aria-label="Слушать подкаст физика цвета" data-path="six">
+                  <svg class="podcasts__play-btn-svg podcasts__play-btn-svg--off podcasts__play-btn-svg--active"
+                    width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke-width="2" />
                     <path
                       d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z"
                       fill="#A1A6B4" />
                   </svg>
+                  <svg data-target="six" class="podcasts__play-btn-svg podcasts__play-btn-svg--on" width="48"
+                    height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
+                    <rect x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4" />
+                    <rect x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4" />
+                  </svg>
                 </button>
               </div>
               <div class="podcasts__reaction flex">
-                <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <div tabindex="-1" class="podcasts__reaction-btn btn-reset listenings">
+                <div class="podcasts__reaction-btn-wrap flex">
+                  <div class="podcasts__reaction-btn btn-reset listenings">
                     <svg width="10" height="13" viewBox="0 0 10 13" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M1.3 11.331L8.29606 6.5L1.3 1.66897V11.331ZM0.666238 1.23131L0.669532 1.23361L0.666238 1.23131ZM1.41031 12.8347L9.64301 7.14971C10.119 6.82485 10.119 6.17514 9.64301 5.85029L1.41031 0.165315C0.828559 -0.240754 0 0.149072 0 0.815026V12.185C0 12.8509 0.828559 13.2408 1.41031 12.8347Z" />
@@ -583,7 +699,7 @@
                   <span class="listenings-counter podcasts__reaction-counters">0</span>
                 </div>
                 <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset like">
+                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset like" aria-label="лайк">
                     <svg width="14" height="13" viewBox="0 0 13 12" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M6.5 12L5.5575 11.1368C2.21 8.08283 0 6.06866 0 3.59673C0 1.58256 1.573 0 3.575 0C4.706 0 5.7915 0.5297 6.5 1.36676C7.2085 0.5297 8.294 0 9.425 0C11.427 0 13 1.58256 13 3.59673C13 6.06866 10.79 8.08283 7.4425 11.1433L6.5 12Z" />
@@ -592,7 +708,7 @@
                   <span class="like-counter podcasts__reaction-counters">0</span>
                 </div>
                 <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset share">
+                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset share" aria-label="поделиться">
                     <svg width="12" height="13" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M10 9.18876C9.49333 9.18876 9.04 9.38454 8.69333 9.69127L3.94 6.98293C3.97333 6.83283 4 6.68273 4 6.5261C4 6.36948 3.97333 6.21938 3.94 6.06928L8.64 3.38705C9 3.71335 9.47333 3.91566 10 3.91566C11.1067 3.91566 12 3.04116 12 1.95783C12 0.874498 11.1067 0 10 0C8.89333 0 8 0.874498 8 1.95783C8 2.11446 8.02667 2.26456 8.06 2.41466L3.36 5.09689C3 4.77058 2.52667 4.56827 2 4.56827C0.893333 4.56827 0 5.44277 0 6.5261C0 7.60944 0.893333 8.48394 2 8.48394C2.52667 8.48394 3 8.28163 3.36 7.95532L8.10667 10.6702C8.07333 10.8072 8.05333 10.9508 8.05333 11.0944C8.05333 12.1451 8.92667 13 10 13C11.0733 13 11.9467 12.1451 11.9467 11.0944C11.9467 10.0437 11.0733 9.18876 10 9.18876Z" />
@@ -617,18 +733,26 @@
                   <h3 class="podcasts__name">Источник звука</h3>
                   <p class="podcasts__autor">Пётр Дмитриевский</p>
                 </div>
-                <button class="podcasts__play-btn btn-reset">
-                  <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <button class="podcasts__play-btn btn-reset" aria-label="Слушать подкаст источник звука"
+                  data-path="seven">
+                  <svg class="podcasts__play-btn-svg podcasts__play-btn-svg--off podcasts__play-btn-svg--active"
+                    width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke-width="2" />
                     <path
                       d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z"
                       fill="#A1A6B4" />
                   </svg>
+                  <svg data-target="seven" class="podcasts__play-btn-svg podcasts__play-btn-svg--on" width="48"
+                    height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
+                    <rect x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4" />
+                    <rect x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4" />
+                  </svg>
                 </button>
               </div>
               <div class="podcasts__reaction flex">
-                <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <div tabindex="-1" class="podcasts__reaction-btn btn-reset listenings">
+                <div class="podcasts__reaction-btn-wrap flex">
+                  <div class="podcasts__reaction-btn btn-reset listenings">
                     <svg width="10" height="13" viewBox="0 0 10 13" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M1.3 11.331L8.29606 6.5L1.3 1.66897V11.331ZM0.666238 1.23131L0.669532 1.23361L0.666238 1.23131ZM1.41031 12.8347L9.64301 7.14971C10.119 6.82485 10.119 6.17514 9.64301 5.85029L1.41031 0.165315C0.828559 -0.240754 0 0.149072 0 0.815026V12.185C0 12.8509 0.828559 13.2408 1.41031 12.8347Z" />
@@ -637,7 +761,7 @@
                   <span class="listenings-counter podcasts__reaction-counters">0</span>
                 </div>
                 <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset like">
+                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset like" aria-label="лайк">
                     <svg width="14" height="13" viewBox="0 0 13 12" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M6.5 12L5.5575 11.1368C2.21 8.08283 0 6.06866 0 3.59673C0 1.58256 1.573 0 3.575 0C4.706 0 5.7915 0.5297 6.5 1.36676C7.2085 0.5297 8.294 0 9.425 0C11.427 0 13 1.58256 13 3.59673C13 6.06866 10.79 8.08283 7.4425 11.1433L6.5 12Z" />
@@ -646,7 +770,7 @@
                   <span class="like-counter podcasts__reaction-counters">0</span>
                 </div>
                 <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset share">
+                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset share" aria-label="поделиться">
                     <svg width="12" height="13" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M10 9.18876C9.49333 9.18876 9.04 9.38454 8.69333 9.69127L3.94 6.98293C3.97333 6.83283 4 6.68273 4 6.5261C4 6.36948 3.97333 6.21938 3.94 6.06928L8.64 3.38705C9 3.71335 9.47333 3.91566 10 3.91566C11.1067 3.91566 12 3.04116 12 1.95783C12 0.874498 11.1067 0 10 0C8.89333 0 8 0.874498 8 1.95783C8 2.11446 8.02667 2.26456 8.06 2.41466L3.36 5.09689C3 4.77058 2.52667 4.56827 2 4.56827C0.893333 4.56827 0 5.44277 0 6.5261C0 7.60944 0.893333 8.48394 2 8.48394C2.52667 8.48394 3 8.28163 3.36 7.95532L8.10667 10.6702C8.07333 10.8072 8.05333 10.9508 8.05333 11.0944C8.05333 12.1451 8.92667 13 10 13C11.0733 13 11.9467 12.1451 11.9467 11.0944C11.9467 10.0437 11.0733 9.18876 10 9.18876Z" />
@@ -671,18 +795,26 @@
                   <h3 class="podcasts__name">Правила этикета</h3>
                   <p class="podcasts__autor">Татьяна Флеганова</p>
                 </div>
-                <button class="podcasts__play-btn btn-reset">
-                  <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <button class="podcasts__play-btn btn-reset" aria-label="Слушать подкаст правила этикета"
+                  data-path="eight">
+                  <svg class="podcasts__play-btn-svg podcasts__play-btn-svg--off podcasts__play-btn-svg--active"
+                    width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke-width="2" />
                     <path
                       d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z"
                       fill="#A1A6B4" />
                   </svg>
+                  <svg data-target="eight" class="podcasts__play-btn-svg podcasts__play-btn-svg--on" width="48"
+                    height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
+                    <rect x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4" />
+                    <rect x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4" />
+                  </svg>
                 </button>
               </div>
               <div class="podcasts__reaction flex">
-                <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <div tabindex="-1" class="podcasts__reaction-btn btn-reset listenings">
+                <div class="podcasts__reaction-btn-wrap flex">
+                  <div class="podcasts__reaction-btn btn-reset listenings">
                     <svg width="10" height="13" viewBox="0 0 10 13" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M1.3 11.331L8.29606 6.5L1.3 1.66897V11.331ZM0.666238 1.23131L0.669532 1.23361L0.666238 1.23131ZM1.41031 12.8347L9.64301 7.14971C10.119 6.82485 10.119 6.17514 9.64301 5.85029L1.41031 0.165315C0.828559 -0.240754 0 0.149072 0 0.815026V12.185C0 12.8509 0.828559 13.2408 1.41031 12.8347Z" />
@@ -691,7 +823,7 @@
                   <span class="listenings-counter podcasts__reaction-counters">0</span>
                 </div>
                 <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset like">
+                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset like" aria-label="лайк">
                     <svg width="14" height="13" viewBox="0 0 13 12" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M6.5 12L5.5575 11.1368C2.21 8.08283 0 6.06866 0 3.59673C0 1.58256 1.573 0 3.575 0C4.706 0 5.7915 0.5297 6.5 1.36676C7.2085 0.5297 8.294 0 9.425 0C11.427 0 13 1.58256 13 3.59673C13 6.06866 10.79 8.08283 7.4425 11.1433L6.5 12Z" />
@@ -700,7 +832,7 @@
                   <span class="like-counter podcasts__reaction-counters">0</span>
                 </div>
                 <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset share">
+                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset share" aria-label="поделиться">
                     <svg width="12" height="13" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M10 9.18876C9.49333 9.18876 9.04 9.38454 8.69333 9.69127L3.94 6.98293C3.97333 6.83283 4 6.68273 4 6.5261C4 6.36948 3.97333 6.21938 3.94 6.06928L8.64 3.38705C9 3.71335 9.47333 3.91566 10 3.91566C11.1067 3.91566 12 3.04116 12 1.95783C12 0.874498 11.1067 0 10 0C8.89333 0 8 0.874498 8 1.95783C8 2.11446 8.02667 2.26456 8.06 2.41466L3.36 5.09689C3 4.77058 2.52667 4.56827 2 4.56827C0.893333 4.56827 0 5.44277 0 6.5261C0 7.60944 0.893333 8.48394 2 8.48394C2.52667 8.48394 3 8.28163 3.36 7.95532L8.10667 10.6702C8.07333 10.8072 8.05333 10.9508 8.05333 11.0944C8.05333 12.1451 8.92667 13 10 13C11.0733 13 11.9467 12.1451 11.9467 11.0944C11.9467 10.0437 11.0733 9.18876 10 9.18876Z" />
@@ -725,18 +857,25 @@
                   <h3 class="podcasts__name">Европа. XIX век</h3>
                   <p class="podcasts__autor">Дмитрий Гутенберг</p>
                 </div>
-                <button class="podcasts__play-btn btn-reset">
-                  <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <button class="podcasts__play-btn btn-reset" aria-label="Слушать подкаст" data-path="nine">
+                  <svg class="podcasts__play-btn-svg podcasts__play-btn-svg--off podcasts__play-btn-svg--active"
+                    width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke-width="2" />
                     <path
                       d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z"
                       fill="#A1A6B4" />
                   </svg>
+                  <svg data-target="nine" class="podcasts__play-btn-svg podcasts__play-btn-svg--on" width="48"
+                    height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
+                    <rect x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4" />
+                    <rect x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4" />
+                  </svg>
                 </button>
               </div>
               <div class="podcasts__reaction flex">
-                <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <div tabindex="-1" class="podcasts__reaction-btn btn-reset listenings">
+                <div class="podcasts__reaction-btn-wrap flex">
+                  <div class="podcasts__reaction-btn btn-reset listenings">
                     <svg width="10" height="13" viewBox="0 0 10 13" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M1.3 11.331L8.29606 6.5L1.3 1.66897V11.331ZM0.666238 1.23131L0.669532 1.23361L0.666238 1.23131ZM1.41031 12.8347L9.64301 7.14971C10.119 6.82485 10.119 6.17514 9.64301 5.85029L1.41031 0.165315C0.828559 -0.240754 0 0.149072 0 0.815026V12.185C0 12.8509 0.828559 13.2408 1.41031 12.8347Z" />
@@ -745,7 +884,7 @@
                   <span class="listenings-counter podcasts__reaction-counters">0</span>
                 </div>
                 <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset like">
+                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset like" aria-label="лайк">
                     <svg width="14" height="13" viewBox="0 0 13 12" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M6.5 12L5.5575 11.1368C2.21 8.08283 0 6.06866 0 3.59673C0 1.58256 1.573 0 3.575 0C4.706 0 5.7915 0.5297 6.5 1.36676C7.2085 0.5297 8.294 0 9.425 0C11.427 0 13 1.58256 13 3.59673C13 6.06866 10.79 8.08283 7.4425 11.1433L6.5 12Z" />
@@ -754,7 +893,7 @@
                   <span class="like-counter podcasts__reaction-counters">0</span>
                 </div>
                 <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset share">
+                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset share" aria-label="поделиться">
                     <svg width="12" height="13" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M10 9.18876C9.49333 9.18876 9.04 9.38454 8.69333 9.69127L3.94 6.98293C3.97333 6.83283 4 6.68273 4 6.5261C4 6.36948 3.97333 6.21938 3.94 6.06928L8.64 3.38705C9 3.71335 9.47333 3.91566 10 3.91566C11.1067 3.91566 12 3.04116 12 1.95783C12 0.874498 11.1067 0 10 0C8.89333 0 8 0.874498 8 1.95783C8 2.11446 8.02667 2.26456 8.06 2.41466L3.36 5.09689C3 4.77058 2.52667 4.56827 2 4.56827C0.893333 4.56827 0 5.44277 0 6.5261C0 7.60944 0.893333 8.48394 2 8.48394C2.52667 8.48394 3 8.28163 3.36 7.95532L8.10667 10.6702C8.07333 10.8072 8.05333 10.9508 8.05333 11.0944C8.05333 12.1451 8.92667 13 10 13C11.0733 13 11.9467 12.1451 11.9467 11.0944C11.9467 10.0437 11.0733 9.18876 10 9.18876Z" />
@@ -779,18 +918,25 @@
                   <h3 class="podcasts__name">О музыке</h3>
                   <p class="podcasts__autor">Дмитрий Гутенберг</p>
                 </div>
-                <button class="podcasts__play-btn btn-reset">
-                  <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <button class="podcasts__play-btn btn-reset" aria-label="Слушать подкаст" data-path="ten">
+                  <svglass="podcasts__play-btn-svg podcasts__play-btn-svg--off podcasts__play-btn-svg--active"
+                    width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke-width="2" />
                     <path
                       d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z"
                       fill="#A1A6B4" />
-                  </svg>
+                    </svg>
+                    <svg data-target="ten" class="podcasts__play-btn-svg podcasts__play-btn-svg--on" width="48"
+                      height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
+                      <rect x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4" />
+                      <rect x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4" />
+                    </svg>
                 </button>
               </div>
               <div class="podcasts__reaction flex">
-                <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <div tabindex="-1" class="podcasts__reaction-btn btn-reset listenings">
+                <div class="podcasts__reaction-btn-wrap flex">
+                  <div class="podcasts__reaction-btn btn-reset listenings">
                     <svg width="10" height="13" viewBox="0 0 10 13" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M1.3 11.331L8.29606 6.5L1.3 1.66897V11.331ZM0.666238 1.23131L0.669532 1.23361L0.666238 1.23131ZM1.41031 12.8347L9.64301 7.14971C10.119 6.82485 10.119 6.17514 9.64301 5.85029L1.41031 0.165315C0.828559 -0.240754 0 0.149072 0 0.815026V12.185C0 12.8509 0.828559 13.2408 1.41031 12.8347Z" />
@@ -799,7 +945,7 @@
                   <span class="listenings-counter podcasts__reaction-counters">0</span>
                 </div>
                 <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset like">
+                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset like" aria-label="лайк">
                     <svg width="14" height="13" viewBox="0 0 13 12" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M6.5 12L5.5575 11.1368C2.21 8.08283 0 6.06866 0 3.59673C0 1.58256 1.573 0 3.575 0C4.706 0 5.7915 0.5297 6.5 1.36676C7.2085 0.5297 8.294 0 9.425 0C11.427 0 13 1.58256 13 3.59673C13 6.06866 10.79 8.08283 7.4425 11.1433L6.5 12Z" />
@@ -808,7 +954,7 @@
                   <span class="like-counter podcasts__reaction-counters">0</span>
                 </div>
                 <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset share">
+                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset share" aria-label="поделиться">
                     <svg width="12" height="13" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M10 9.18876C9.49333 9.18876 9.04 9.38454 8.69333 9.69127L3.94 6.98293C3.97333 6.83283 4 6.68273 4 6.5261C4 6.36948 3.97333 6.21938 3.94 6.06928L8.64 3.38705C9 3.71335 9.47333 3.91566 10 3.91566C11.1067 3.91566 12 3.04116 12 1.95783C12 0.874498 11.1067 0 10 0C8.89333 0 8 0.874498 8 1.95783C8 2.11446 8.02667 2.26456 8.06 2.41466L3.36 5.09689C3 4.77058 2.52667 4.56827 2 4.56827C0.893333 4.56827 0 5.44277 0 6.5261C0 7.60944 0.893333 8.48394 2 8.48394C2.52667 8.48394 3 8.28163 3.36 7.95532L8.10667 10.6702C8.07333 10.8072 8.05333 10.9508 8.05333 11.0944C8.05333 12.1451 8.92667 13 10 13C11.0733 13 11.9467 12.1451 11.9467 11.0944C11.9467 10.0437 11.0733 9.18876 10 9.18876Z" />
@@ -833,18 +979,25 @@
                   <h3 class="podcasts__name">Люди сегодня</h3>
                   <p class="podcasts__autor">Анна Васильева</p>
                 </div>
-                <button class="podcasts__play-btn btn-reset">
-                  <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <button class="podcasts__play-btn btn-reset" aria-label="Слушать подкаст" data-path="eleven">
+                  <svg" class="podcasts__play-btn-svg podcasts__play-btn-svg--off podcasts__play-btn-svg--active"
+                    width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke-width="2" />
                     <path
                       d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z"
                       fill="#A1A6B4" />
-                  </svg>
+                    </svg>
+                    <svg data-target="eleven" class="podcasts__play-btn-svg podcasts__play-btn-svg--on" width="48"
+                      height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
+                      <rect x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4" />
+                      <rect x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4" />
+                    </svg>
                 </button>
               </div>
               <div class="podcasts__reaction flex">
-                <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <div tabindex="-1" class="podcasts__reaction-btn btn-reset listenings">
+                <div class="podcasts__reaction-btn-wrap flex">
+                  <div class="podcasts__reaction-btn btn-reset listenings">
                     <svg width="10" height="13" viewBox="0 0 10 13" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M1.3 11.331L8.29606 6.5L1.3 1.66897V11.331ZM0.666238 1.23131L0.669532 1.23361L0.666238 1.23131ZM1.41031 12.8347L9.64301 7.14971C10.119 6.82485 10.119 6.17514 9.64301 5.85029L1.41031 0.165315C0.828559 -0.240754 0 0.149072 0 0.815026V12.185C0 12.8509 0.828559 13.2408 1.41031 12.8347Z" />
@@ -853,7 +1006,7 @@
                   <span class="listenings-counter podcasts__reaction-counters">0</span>
                 </div>
                 <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset like">
+                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset like" aria-label="лайк">
                     <svg width="14" height="13" viewBox="0 0 13 12" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M6.5 12L5.5575 11.1368C2.21 8.08283 0 6.06866 0 3.59673C0 1.58256 1.573 0 3.575 0C4.706 0 5.7915 0.5297 6.5 1.36676C7.2085 0.5297 8.294 0 9.425 0C11.427 0 13 1.58256 13 3.59673C13 6.06866 10.79 8.08283 7.4425 11.1433L6.5 12Z" />
@@ -862,7 +1015,7 @@
                   <span class="like-counter podcasts__reaction-counters">0</span>
                 </div>
                 <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset share">
+                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset share" aria-label="поделиться">
                     <svg width="12" height="13" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M10 9.18876C9.49333 9.18876 9.04 9.38454 8.69333 9.69127L3.94 6.98293C3.97333 6.83283 4 6.68273 4 6.5261C4 6.36948 3.97333 6.21938 3.94 6.06928L8.64 3.38705C9 3.71335 9.47333 3.91566 10 3.91566C11.1067 3.91566 12 3.04116 12 1.95783C12 0.874498 11.1067 0 10 0C8.89333 0 8 0.874498 8 1.95783C8 2.11446 8.02667 2.26456 8.06 2.41466L3.36 5.09689C3 4.77058 2.52667 4.56827 2 4.56827C0.893333 4.56827 0 5.44277 0 6.5261C0 7.60944 0.893333 8.48394 2 8.48394C2.52667 8.48394 3 8.28163 3.36 7.95532L8.10667 10.6702C8.07333 10.8072 8.05333 10.9508 8.05333 11.0944C8.05333 12.1451 8.92667 13 10 13C11.0733 13 11.9467 12.1451 11.9467 11.0944C11.9467 10.0437 11.0733 9.18876 10 9.18876Z" />
@@ -887,18 +1040,25 @@
                   <h3 class="podcasts__name">Хэллоу, Африка!</h3>
                   <p class="podcasts__autor">Пётр Дмитриевский</p>
                 </div>
-                <button class="podcasts__play-btn btn-reset">
-                  <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <button class="podcasts__play-btn btn-reset" aria-label="Слушать подкаст" data-path="twelve">
+                  <svg" class="podcasts__play-btn-svg podcasts__play-btn-svg--off podcasts__play-btn-svg--active"
+                    width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke-width="2" />
                     <path
                       d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z"
                       fill="#A1A6B4" />
-                  </svg>
+                    </svg>
+                    <svg data-target="twelve" class="podcasts__play-btn-svg podcasts__play-btn-svg--on" width="48"
+                      height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
+                      <rect x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4" />
+                      <rect x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4" />
+                    </svg>
                 </button>
               </div>
               <div class="podcasts__reaction flex">
-                <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <div tabindex="-1" class="podcasts__reaction-btn btn-reset listenings">
+                <div class="podcasts__reaction-btn-wrap flex">
+                  <div class="podcasts__reaction-btn btn-reset listenings">
                     <svg width="10" height="13" viewBox="0 0 10 13" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M1.3 11.331L8.29606 6.5L1.3 1.66897V11.331ZM0.666238 1.23131L0.669532 1.23361L0.666238 1.23131ZM1.41031 12.8347L9.64301 7.14971C10.119 6.82485 10.119 6.17514 9.64301 5.85029L1.41031 0.165315C0.828559 -0.240754 0 0.149072 0 0.815026V12.185C0 12.8509 0.828559 13.2408 1.41031 12.8347Z" />
@@ -907,7 +1067,7 @@
                   <span class="listenings-counter podcasts__reaction-counters">0</span>
                 </div>
                 <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset like">
+                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset like" aria-label="лайк">
                     <svg width="14" height="13" viewBox="0 0 13 12" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M6.5 12L5.5575 11.1368C2.21 8.08283 0 6.06866 0 3.59673C0 1.58256 1.573 0 3.575 0C4.706 0 5.7915 0.5297 6.5 1.36676C7.2085 0.5297 8.294 0 9.425 0C11.427 0 13 1.58256 13 3.59673C13 6.06866 10.79 8.08283 7.4425 11.1433L6.5 12Z" />
@@ -916,7 +1076,7 @@
                   <span class="like-counter podcasts__reaction-counters">0</span>
                 </div>
                 <div class="podcasts__reaction-btn-wrap flex" tabindex="0">
-                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset share">
+                  <button tabindex="-1" class="podcasts__reaction-btn btn-reset share" aria-label="поделиться">
                     <svg width="12" height="13" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M10 9.18876C9.49333 9.18876 9.04 9.38454 8.69333 9.69127L3.94 6.98293C3.97333 6.83283 4 6.68273 4 6.5261C4 6.36948 3.97333 6.21938 3.94 6.06928L8.64 3.38705C9 3.71335 9.47333 3.91566 10 3.91566C11.1067 3.91566 12 3.04116 12 1.95783C12 0.874498 11.1067 0 10 0C8.89333 0 8 0.874498 8 1.95783C8 2.11446 8.02667 2.26456 8.06 2.41466L3.36 5.09689C3 4.77058 2.52667 4.56827 2 4.56827C0.893333 4.56827 0 5.44277 0 6.5261C0 7.60944 0.893333 8.48394 2 8.48394C2.52667 8.48394 3 8.28163 3.36 7.95532L8.10667 10.6702C8.07333 10.8072 8.05333 10.9508 8.05333 11.0944C8.05333 12.1451 8.92667 13 10 13C11.0733 13 11.9467 12.1451 11.9467 11.0944C11.9467 10.0437 11.0733 9.18876 10 9.18876Z" />
@@ -967,7 +1127,7 @@
                 <h3 class="broadcast__name">О людях и книгах</h3>
                 <p class="broadcast__announce">Анонсируется отдельно</p>
               </div>
-              <a href="#" class="broadcast__more flex">
+              <a href="#" class="broadcast__more flex" aria-label="Передача о людях и книгах">
                 Подробнее
                 <svg width="28" height="12" viewBox="0 0 28 12" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -986,7 +1146,7 @@
                 <h3 class="broadcast__name">Графомания td</h3>
                 <p class="broadcast__announce">По понедельникам в 10:00</p>
               </div>
-              <a href="#" class="broadcast__more flex">
+              <a href="#" class="broadcast__more flex" aria-label="Передача графомания td">
                 Подробнее
                 <svg width="28" height="12" viewBox="0 0 28 12" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -1005,7 +1165,7 @@
                 <h3 class="broadcast__name">Не Рим, не Троя</h3>
                 <p class="broadcast__announce">По вторникам в 12:00</p>
               </div>
-              <a href="#" class="broadcast__more flex">
+              <a href="#" class="broadcast__more flex" aria-label="Передача не рим, не троя">
                 Подробнее
                 <svg width="28" height="12" viewBox="0 0 28 12" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -1024,7 +1184,7 @@
                 <h3 class="broadcast__name">Эрудит</h3>
                 <p class="broadcast__announce">По пятницам в 17:00</p>
               </div>
-              <a href="#" class="broadcast__more flex">
+              <a href="#" class="broadcast__more flex" aria-label="Передача эрудит">
                 Подробнее
                 <svg width="28" height="12" viewBox="0 0 28 12" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -1043,7 +1203,7 @@
                 <h3 class="broadcast__name">Тонкости эпох</h3>
                 <p class="broadcast__announce">По субботам в 10:00</p>
               </div>
-              <a href="#" class="broadcast__more flex">
+              <a href="#" class="broadcast__more flex" aria-label="Передача Тонкости эпох">
                 Подробнее
                 <svg width="28" height="12" viewBox="0 0 28 12" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -1062,7 +1222,7 @@
                 <h3 class="broadcast__name">Живые мысли</h3>
                 <p class="broadcast__announce">По воскресеньям в 15:30</p>
               </div>
-              <a href="#" class="broadcast__more flex">
+              <a href="#" class="broadcast__more flex" aria-label="Передача живые мысли">
                 Подробнее
                 <svg width="28" height="12" viewBox="0 0 28 12" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -2081,56 +2241,64 @@
         <ul class="playlists__checkbox-list list-reset ">
           <li class="playlists__checkbox-item flex">
             <label class="playlists__checkbox-wrap">
-              <input type="radio" checked name="radio-btn" class="playlists__checkbox playlists__checkbox--default visually-hidden">
+              <input type="radio" checked name="radio-btn"
+                class="playlists__checkbox playlists__checkbox--default visually-hidden">
               <span class="playlists__checkbox playlists__checkbox--custom"></span>
               <span class="playlists__radio-name">Постпанк</span>
             </label>
           </li>
           <li class="playlists__checkbox-item flex">
             <label class="playlists__checkbox-wrap">
-              <input type="radio" name="radio-btn" class="playlists__checkbox playlists__checkbox--default visually-hidden">
+              <input type="radio" name="radio-btn"
+                class="playlists__checkbox playlists__checkbox--default visually-hidden">
               <span class="playlists__checkbox playlists__checkbox--custom"></span>
               <span class="playlists__radio-name">Хардкор</span>
             </label>
           </li>
           <li class="playlists__checkbox-item flex">
             <label class="playlists__checkbox-wrap">
-              <input type="radio" name="radio-btn" class="playlists__checkbox playlists__checkbox--default visually-hidden">
+              <input type="radio" name="radio-btn"
+                class="playlists__checkbox playlists__checkbox--default visually-hidden">
               <span class="playlists__checkbox playlists__checkbox--custom"></span>
               <span class="playlists__radio-name">Панк-рок</span>
             </label>
           </li>
           <li class="playlists__checkbox-item flex">
             <label class="playlists__checkbox-wrap">
-              <input type="radio" name="radio-btn" class="playlists__checkbox playlists__checkbox--default visually-hidden">
+              <input type="radio" name="radio-btn"
+                class="playlists__checkbox playlists__checkbox--default visually-hidden">
               <span class="playlists__checkbox playlists__checkbox--custom"></span>
               <span class="playlists__radio-name">Рок</span>
             </label>
           </li>
           <li class="playlists__checkbox-item flex">
             <label class="playlists__checkbox-wrap">
-              <input type="radio" name="radio-btn" class="playlists__checkbox playlists__checkbox--default visually-hidden">
+              <input type="radio" name="radio-btn"
+                class="playlists__checkbox playlists__checkbox--default visually-hidden">
               <span class="playlists__checkbox playlists__checkbox--custom"></span>
               <span class="playlists__radio-name">Прогрессивный рок</span>
             </label>
           </li>
           <li class="playlists__checkbox-item flex">
             <label class="playlists__checkbox-wrap">
-              <input type="radio" name="radio-btn" class="playlists__checkbox playlists__checkbox--default visually-hidden">
+              <input type="radio" name="radio-btn"
+                class="playlists__checkbox playlists__checkbox--default visually-hidden">
               <span class="playlists__checkbox playlists__checkbox--custom"></span>
               <span class="playlists__radio-name">Электронная музыка</span>
             </label>
           </li>
           <li class="playlists__checkbox-item flex">
             <label class="playlists__checkbox-wrap">
-              <input type="radio" name="radio-btn" class="playlists__checkbox playlists__checkbox--default visually-hidden">
+              <input type="radio" name="radio-btn"
+                class="playlists__checkbox playlists__checkbox--default visually-hidden">
               <span class="playlists__checkbox playlists__checkbox--custom"></span>
               <span class="playlists__radio-name">Классическая музыка</span>
             </label>
           </li>
           <li class="playlists__checkbox-item flex">
             <label class="playlists__checkbox-wrap">
-              <input type="radio" name="radio-btn" class="playlists__checkbox playlists__checkbox--default visually-hidden">
+              <input type="radio" name="radio-btn"
+                class="playlists__checkbox playlists__checkbox--default visually-hidden">
               <span class="playlists__checkbox playlists__checkbox--custom"></span>
               <span class="playlists__radio-name">Звуки природы и шум города</span>
             </label>

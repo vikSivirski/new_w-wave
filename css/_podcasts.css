@@ -162,6 +162,18 @@
   transition: stroke 0.2s ease-in-out;
 }
 
+.podcasts__play-btn--active .podcasts__play-btn-svg--off {
+  display: none;
+}
+
+.podcasts__play-btn-svg--on {
+  display: none;
+}
+
+.podcasts__play-btn--active .podcasts__play-btn-svg--on {
+  display: inline-block;
+}
+
 .podcasts__play-btn:hover {
   stroke: var(--violet);
 }

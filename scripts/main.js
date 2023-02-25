@@ -36,7 +36,13 @@ menuLinks.forEach(function(headerLink) {
 
 })
 
+const audioBtn = document.querySelectorAll('.subheader__audio-btn');
 
+audioBtn.forEach(function(btnElement) {
+  btnElement.addEventListener('click', function() {
+    btnElement.classList.toggle('subheader__audio-btn--active');
+  })
+})
 
 const searchBtn = document.querySelector('.header__search-btn ');
 const searchForm = document.querySelector('.search-form');
@@ -57,9 +63,9 @@ searchBtnActive.addEventListener('click', function() {
 let likeBtn = document.querySelectorAll('.like');
 let shareBtn = document.querySelectorAll('.share');
 let listeningsBtn = document.querySelectorAll('.podcasts__play-btn')
-let likeCounter = document.querySelectorAll('.like__counter');
-let shareCounter = document.querySelectorAll('.share__counter');
-let listeningsCounter = document.querySelectorAll('.listenings__counter');
+let likeCounter = document.querySelectorAll('.like-counter');
+let shareCounter = document.querySelectorAll('.share-counter');
+let listeningsCounter = document.querySelectorAll('.listenings-counter');
 let reactBtn = document.querySelectorAll('.podcasts__reaction-btn');
 
 function counterLikes() {
@@ -90,6 +96,12 @@ function counterListenings() {
 };
 listeningsBtn.forEach(function(listenings) {
   listenings.addEventListener('click', counterListenings)
+});
+listeningsBtn.forEach(function(listenings) {
+  listenings.addEventListener('click', counterListenings)
+  listenings.addEventListener('click', function() {
+    listenings.classList.toggle('podcasts__play-btn--active')
+  })
 });
 
 reactBtn.forEach(function (btn) {
@@ -220,4 +232,5 @@ new JustValidate('.about__form', {
     });
   }
 });
+
 
