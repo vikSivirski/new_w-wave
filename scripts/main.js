@@ -1,5 +1,23 @@
-new Accordion('.subheader__accordion');
-new Accordion('.guests__accordion');
+const modalBtn = document.querySelectorAll('.header__account-btn');
+const modalWindow = document.querySelector('.login');
+const modalClosed = document.querySelector('.login__closed');
+
+modalBtn.forEach(function(modalBtn) {
+
+  modalBtn.addEventListener('click', function() {
+
+    modalWindow.classList.toggle('login--active');
+    document.body.classList.toggle('stop-scroll');
+  })
+
+})
+
+modalClosed.addEventListener('click', function() {
+
+  modalWindow.classList.remove('login--active');
+  document.body.classList.remove('stop-scroll')
+
+})
 
 const burger = document.querySelector('.hamburger');
 const menu = document.querySelector('.header__nav-wrap');
@@ -35,6 +53,7 @@ menuLinks.forEach(function(headerLink) {
   })
 
 })
+
 
 const audioBtn = document.querySelectorAll('.subheader__audio-btn');
 
@@ -126,6 +145,7 @@ moreBtn.addEventListener('click', function () {
 const element = document.querySelector('.broadcast__select');
 const choices = new Choices(element, {
 
+  allowHTML: true,
   searchEnabled: false,
   itemSelectText: '',
 
@@ -185,18 +205,18 @@ const swiper = new Swiper('.swiper', {
       },
     }
 
-}});
+  }});
 
 
-new JustValidate('.about__form', {
-  rules: {
-    checkbox: {
-      required: true
-    },
-    myField: {
-      required: false
-    },
-    email: {
+  new JustValidate('.about__form', {
+    rules: {
+      checkbox: {
+        required: true
+      },
+      myField: {
+        required: false
+      },
+      email: {
       required: true,
       email: true
     },
@@ -235,4 +255,5 @@ new JustValidate('.about__form', {
   }
 });
 
-
+new Accordion('.subheader__accordion');
+new Accordion('.guests__accordion');
