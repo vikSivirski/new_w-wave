@@ -2,9 +2,9 @@ const modalBtn = document.querySelectorAll('.header__account-btn');
 const modalWindow = document.querySelector('.login');
 const modalClosed = document.querySelector('.login__closed');
 
-modalBtn.forEach(function(modalBtn) {
+modalBtn.forEach(function (modalBtn) {
 
-  modalBtn.addEventListener('click', function() {
+  modalBtn.addEventListener('click', function () {
 
     modalWindow.classList.toggle('login--active');
     document.body.classList.toggle('stop-scroll');
@@ -12,18 +12,20 @@ modalBtn.forEach(function(modalBtn) {
 
 })
 
-modalClosed.addEventListener('click', function() {
+modalClosed.addEventListener('click', function () {
 
   modalWindow.classList.remove('login--active');
-  document.body.classList.remove('stop-scroll')
+  document.body.classList.remove('stop-scroll');
 
 })
+
+
 
 const burger = document.querySelector('.hamburger');
 const menu = document.querySelector('.header__nav-wrap');
 const menuLinks = document.querySelectorAll('.header__item')
 
-burger.addEventListener('click', function() {
+burger.addEventListener('click', function () {
 
   burger.classList.toggle('is-active');
 
@@ -36,17 +38,17 @@ burger.addEventListener('click', function() {
 
 });
 
-menu.addEventListener('transitionend', function() {
+menu.addEventListener('transitionend', function () {
 
-  if(!menu.classList.contains('header__nav--active')) {
+  if (!menu.classList.contains('header__nav--active')) {
     menu.removeAttribute('style');
   }
 
 })
 
-menuLinks.forEach(function(headerLink) {
+menuLinks.forEach(function (headerLink) {
 
-  headerLink.addEventListener('click', function() {
+  headerLink.addEventListener('click', function () {
     burger.classList.remove('is-active');
     menu.classList.remove('header__nav--active');
     document.body.classList.remove('stop-scroll');
@@ -57,8 +59,8 @@ menuLinks.forEach(function(headerLink) {
 
 const audioBtn = document.querySelectorAll('.subheader__audio-btn');
 
-audioBtn.forEach(function(btnElement) {
-  btnElement.addEventListener('click', function() {
+audioBtn.forEach(function (btnElement) {
+  btnElement.addEventListener('click', function () {
     btnElement.classList.toggle('subheader__audio-btn--active');
   })
 })
@@ -66,12 +68,12 @@ audioBtn.forEach(function(btnElement) {
 const searchBtn = document.querySelector('.header__search-btn ');
 const searchForm = document.querySelector('.search-form');
 const searchBtnActive = document.querySelector('.search-form__btn');
-searchBtn.addEventListener('click', function() {
+searchBtn.addEventListener('click', function () {
 
   searchForm.classList.toggle('search-form--active')
 
 });
-searchBtnActive.addEventListener('click', function() {
+searchBtnActive.addEventListener('click', function () {
 
   searchForm.classList.remove('search-form--active')
 
@@ -88,37 +90,37 @@ let listeningsCounter = document.querySelectorAll('.listenings-counter');
 let reactBtn = document.querySelectorAll('.podcasts__reaction-btn');
 
 function counterLikes() {
-  likeCounter.forEach(function(elem) {
+  likeCounter.forEach(function (elem) {
     let likes = parseInt(elem.textContent);
     elem.textContent = likes + 1;
   });
 };
-likeBtn.forEach(function(like) {
+likeBtn.forEach(function (like) {
   like.addEventListener('click', counterLikes)
 });
 
 function counterShare() {
-  shareCounter.forEach(function(elem) {
+  shareCounter.forEach(function (elem) {
     let likes = parseInt(elem.textContent);
     elem.textContent = likes + 1;
   });
 };
-shareBtn.forEach(function(share) {
+shareBtn.forEach(function (share) {
   share.addEventListener('click', counterShare)
 });
 
 function counterListenings() {
-  listeningsCounter.forEach(function(elem) {
+  listeningsCounter.forEach(function (elem) {
     let likes = parseInt(elem.textContent);
     elem.textContent = likes + 1;
   });
 };
-listeningsBtn.forEach(function(listenings) {
+listeningsBtn.forEach(function (listenings) {
   listenings.addEventListener('click', counterListenings)
 });
-listeningsBtn.forEach(function(listenings) {
+listeningsBtn.forEach(function (listenings) {
   listenings.addEventListener('click', counterListenings)
-  listenings.addEventListener('click', function() {
+  listenings.addEventListener('click', function () {
     listenings.classList.toggle('podcasts__play-btn--active')
   })
 });
@@ -154,15 +156,15 @@ const choices = new Choices(element, {
 let btnTabs = document.querySelectorAll('.tab-btn');
 let itemTabs = document.querySelectorAll('.guests__tabs-item');
 
-btnTabs.forEach(function(element) {
-  element.addEventListener('click', function(e) {
+btnTabs.forEach(function (element) {
+  element.addEventListener('click', function (e) {
 
     const path = e.currentTarget.dataset.path;
 
-    btnTabs.forEach(function(btn){ btn.classList.remove('tab-btn--active')});
+    btnTabs.forEach(function (btn) { btn.classList.remove('tab-btn--active') });
     e.currentTarget.classList.add('tab-btn--active');
 
-    itemTabs.forEach(function(element){ element.classList.remove('guests__tabs-item--active')});
+    itemTabs.forEach(function (element) { element.classList.remove('guests__tabs-item--active') });
     document.querySelector(`[data-target="${path}"]`).classList.add('guests__tabs-item--active');
   })
 });
@@ -205,18 +207,19 @@ const swiper = new Swiper('.swiper', {
       },
     }
 
-  }});
+  }
+});
 
 
-  new JustValidate('.about__form', {
-    rules: {
-      checkbox: {
-        required: true
-      },
-      myField: {
-        required: false
-      },
-      email: {
+new JustValidate('.about__form', {
+  rules: {
+    checkbox: {
+      required: true
+    },
+    myField: {
+      required: false
+    },
+    email: {
       required: true,
       email: true
     },
@@ -224,35 +227,43 @@ const swiper = new Swiper('.swiper', {
       required: true,
       minLength: 3
     },
+
+    password: {
+      required: true,
+      minLength: 8,
+      strength: {
+        default: true,
+      }
+    }
   },
   messages: {
     name: {
       minLength: 'Ошибка',
       required: 'Это поле обязательно для заполнения',
     },
-    email:{
+    email: {
       required: 'Это поле обязательно для заполнения',
       email: 'Ошибка',
-    } ,
+    },
 
-    checkbox: {
-      required: 'Это важно'
-    }
+    password: {
+      required: 'Это поле обязательно для заполнения',
+      minLength: 'Пароль должен содержать минимум 8 символов',
+    },
   },
 
-  submitHandler: function (form, values, ajax) {
-    // const form = document.querySelector('.about__form');
+  // submitHandler: function (form, values, ajax) {
 
-    ajax({
-      url: 'mail.php',
-      method: 'POST',
-      data: values,
-      async: true,
-      callback: function(response)  {
-        console.log(response)
-      }
-    });
-  }
+  //   ajax({
+  //     url: 'mail.php',
+  //     method: 'POST',
+  //     data: values,
+  //     async: true,
+  //     callback: function(response)  {
+  //       console.log(response)
+  //     }
+  //   });
+  // }
 });
 
 new Accordion('.subheader__accordion');

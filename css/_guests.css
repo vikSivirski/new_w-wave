@@ -188,6 +188,27 @@
   color: var(--gray);
 }
 
+.guests__socials-link {
+  outline: none;
+}
+
+.guests__socials-link svg{
+  fill: var(--gray);
+  transition: fill 0.2s ease-in-out;
+}
+
+.guests__socials-link:hover svg{
+  fill: var(--lightViolet);
+}
+
+.guests__socials-link:focus-visible svg{
+  fill: var(--lightViolet);
+}
+
+.guests__socials-link:active svg{
+  fill: var(--violet);
+}
+
 .guests__ether {
   display: inline-block;
   padding: 12px 19px;

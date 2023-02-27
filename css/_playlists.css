@@ -90,6 +90,26 @@
   outline: none;
 }
 
+.playlists__item--rus::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 20px;
+  background-image: url(../img/rus-flag.svg);
+}
+
+.playlists__item--eng::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 20px;
+  background-image: url(../img/eng-flag.svg);
+}
+
 .playlists__img-wrap {
   position: relative;
   display: block;

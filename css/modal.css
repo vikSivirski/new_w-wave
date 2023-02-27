@@ -29,6 +29,21 @@
   position: absolute;
   top: 30px;
   right: 30px;
+  stroke: var(--gray);
+  outline: none;
+  transition: stroke 0.2s ease-in-out;
+}
+
+.login__closed:hover {
+  stroke: var(--violet);
+}
+
+.login__closed:focus-visible {
+  stroke: var(--lightViolet);
+}
+
+.login__closed:focus-visible {
+  stroke: var(--darkViolet);
 }
 
 .login__title {
@@ -48,6 +63,20 @@
 
 .login__link {
   color: var(--violet);
+  outline: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.login__link:hover {
+  color: var(--lightViolet);
+}
+
+.login__link:focus-visible {
+  color: var(--lightViolet);
+}
+
+.login__link:active {
+  color: var(--darkViolet);
 }
 
 .login__input-wrap {
@@ -63,6 +92,16 @@
   border: 1px solid white;
   border-radius: 40px;
   background-color: var(--black);
+  outline: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.login__input:hover {
+  background-color: var(--lightBlack);
+}
+
+.login__input:focus-visible {
+  background-color: var(--lightBlack);
 }
 
 .login__input::placeholder {
@@ -82,8 +121,22 @@
   color: white;
   border-radius: 40px;
   background-color: var(--violet);
+  outline: none;
+  transition: background-color 0.2s ease-in-out, outline 0.2s ease-in-out;
 }
 
+.login__btn:hover {
+  background-color: var(--lightViolet);
+}
+
+.login__btn:focus-visible {
+  background-color: var(--lightViolet);
+  outline: 2px solid var(--violet);
+}
+
+.login__btn:active {
+  background-color: var(--darkViolet);
+}
 
 .login__socials-text {
   margin: 0;
@@ -94,12 +147,31 @@
   color: white;
 }
 
-.login__list-item {
+.login__list-item:not(:last-child){
   margin-right: 40px;
 }
 
 .login__socials-link {
+  display: block;
   height: 34px;
+  outline: none;
+}
+
+.login__socials-link svg{
+  fill: var(--gray);
+  transition: fill 0.2s ease-in-out;
+}
+
+.login__socials-link:hover svg {
+  fill: var(--violet);
+}
+
+.login__socials-link:focus-visible svg {
+  fill: var(--lightViolet);
+}
+
+.login__socials-link:active svg {
+  fill: var(--darkViolet);
 }
 
 @media (max-width: 1023px) {

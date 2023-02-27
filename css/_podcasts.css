@@ -16,10 +16,25 @@
 }
 
 .podcasts__item {
+  position: relative;
   height: 140px;
   width: calc((100% - 30px) / 2);
   margin-bottom: 30px;
   background-color: var(--white);
+}
+
+.podcasts__date {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 51px;
+  height: 16px;
+  font-size: 10px;
+  line-height: 10px;
+  background-color: var(--podcastsGray);
 }
 
 .podcasts__item:nth-child(n + 9) {
@@ -102,6 +117,7 @@
 }
 
 .podcasts__duration {
+  display: block;
   margin: 0;
   margin-bottom: 8px;
   font-size: 12px;

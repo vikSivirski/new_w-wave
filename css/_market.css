@@ -36,6 +36,9 @@
   padding-bottom: 29px;
   margin-bottom: 19px;
   color: var(--gold);
+  background-image: url("../img/footer_wave.svg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
 }
 
 .market__text {
