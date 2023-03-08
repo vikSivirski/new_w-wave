@@ -19,6 +19,39 @@ modalClosed.addEventListener('click', function () {
 
 })
 
+new JustValidate('.login__form', {
+  rules: {
+    email: {
+      required: true,
+      email: true
+    },
+    password: {
+      required: true,
+      minLength: 8,
+    }
+  },
+  messages: {
+    email: {
+      required: 'Это поле обязательно для заполнения',
+      email: 'Некорректный email',
+    },
+    password: {
+      required: 'Это поле обязательно для заполнения',
+      minLength: 'Пароль должен содержать минимум 8 символов',
+    },
+  },
+  submitHandler: function (form, values, ajax) {
+    ajax({
+      url: 'https://just-validate-api.herokuapp.com/submit',
+      method: 'POST',
+      data: values,
+      async: true,
+      callback: function (response) {
+        console.log(response)
+      }
+    });
+  },
+});
 
 
 const burger = document.querySelector('.hamburger');
@@ -147,6 +180,7 @@ moreBtn.addEventListener('click', function () {
 const element = document.querySelector('.broadcast__select');
 const choices = new Choices(element, {
 
+  placeholder: true,
   allowHTML: true,
   searchEnabled: false,
   itemSelectText: '',
@@ -213,9 +247,6 @@ const swiper = new Swiper('.swiper', {
 
 new JustValidate('.about__form', {
   rules: {
-    checkbox: {
-      required: true
-    },
     myField: {
       required: false
     },
@@ -227,14 +258,6 @@ new JustValidate('.about__form', {
       required: true,
       minLength: 3
     },
-
-    password: {
-      required: true,
-      minLength: 8,
-      strength: {
-        default: true,
-      }
-    }
   },
   messages: {
     name: {
@@ -244,11 +267,6 @@ new JustValidate('.about__form', {
     email: {
       required: 'Это поле обязательно для заполнения',
       email: 'Ошибка',
-    },
-
-    password: {
-      required: 'Это поле обязательно для заполнения',
-      minLength: 'Пароль должен содержать минимум 8 символов',
     },
   },
 

@@ -80,10 +80,10 @@
 }
 
 .login__input-wrap {
+  position: relative;
   width: 74%;
   margin-bottom: 30px;
 }
-
 
 .login__input {
   width: 100%;
