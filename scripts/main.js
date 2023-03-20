@@ -1,13 +1,14 @@
 const modalBtn = document.querySelectorAll('.header__account-btn');
 const modalWindow = document.querySelector('.login');
 const modalClosed = document.querySelector('.login__closed');
+const modalBackground = document.querySelector('.popup');
 
 modalBtn.forEach(function (modalBtn) {
 
   modalBtn.addEventListener('click', function () {
 
     modalWindow.classList.toggle('login--active');
-    document.body.classList.toggle('stop-scroll');
+    modalBackground.classList.toggle('popup--active');
   })
 
 })
@@ -15,7 +16,7 @@ modalBtn.forEach(function (modalBtn) {
 modalClosed.addEventListener('click', function () {
 
   modalWindow.classList.remove('login--active');
-  document.body.classList.remove('stop-scroll');
+  modalBackground.classList.remove('popup--active');
 
 })
 
@@ -40,16 +41,23 @@ new JustValidate('.login__form', {
       minLength: 'Пароль должен содержать минимум 8 символов',
     },
   },
-  submitHandler: function (form, values, ajax) {
-    ajax({
-      url: 'https://just-validate-api.herokuapp.com/submit',
-      method: 'POST',
-      data: values,
-      async: true,
-      callback: function (response) {
-        console.log(response)
+  submitHandler: function (form) {
+    let formData = new FormData(form);
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          console.log("Отправлено");
+        }
       }
-    });
+    }
+
+    xhr.open('POST',  'mail.php', true);
+    xhr.send(formData);
+
+    form.reset();
   },
 });
 

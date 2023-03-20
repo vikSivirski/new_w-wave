@@ -1,68 +1,64 @@
-<?php
+<?
+require_once 'PHPMailer/PHPMailerAutoload.php';
 
-require 'phpmailer/PHPMailer.php';
-require 'phpmailer/SMTP.php';
-require 'phpmailer/Exception.php';
+$admin_email = array();
+foreach ( $_POST["admin_email"] as  $key => $value ) {
+ array_push($admin_email, $value);
+}
 
-$title = "Тема письма";
+$admin_email = 'msne1488@gmail.com';
+
+$form_subject = trim($_POST["form_subject"]);
+
+$mail = new PHPMailer;
+$mail->CharSet = 'UTF-8';
+
+
 
 $c = true;
-// Формирование самого письма
-$title = "Заголовок письма";
-foreach ( $_POST as $key => $value ) {
-  if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
-    $body .= "
-    " . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
-      <td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
-      <td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
-    </tr>
-    ";
-  }
+$message = '';
+foreach ( $_POST as  $key => $value ) {
+	if ( $value != "" && $key != "admin_email" && $key != "form_subject" ) {
+		if (is_array($value)) {
+			$val_text = '';
+			foreach ($ valueas $val) {
+				if ($val && $val != '') {
+					$val_text .= ($val_text=="?":', ').$val;
+				}
+			}
+			$value = $val_text;
+		}
+		$message .= "
+		" . ( ($c = ! $c) ? '<tr>':'<tr>' ) . "
+ <td style='padding: 10px; width: auto;'><b>$key:</b></td>
+ <td style='padding: 10px;width: 100%;'>$value</td>
+ </tr>
+      ";
+	}
 }
+$message = "<table style='width: 50%;'>$message</table>";
 
-$body = "<table style='width: 100%;'>$body</table>";
 
-// Настройки PHPMailer
-$mail = new PHPMailer\PHPMailer\PHPMailer();
+// От кого
+$mail->setFrom('adm@' . $_SERVER['HTTP_HOST'], 'Your best site');
 
-try {
-  $mail->isSMTP();
-  $mail->CharSet = "UTF-8";
-  $mail->SMTPAuth   = true;
-
-  // Настройки вашей почты
-  $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-  $mail->Username   = 'msne1488@gmail.com'; // Логин на почте
-  $mail->Password   = 'sdfbktjzaotpewyu'; // Пароль на почте //sdfbktjzaotpewyu
-  $mail->SMTPSecure = 'ssl';
-  $mail->Port       = 465;
-
-  $mail->setFrom('msne1488@gmail.com', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
-
-  // Получатель письма
-  $mail->addAddress('');
-
-  // Прикрипление файлов к письму
-  if (!empty($file['name'][0])) {
-    for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
-      $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
-      $filename = $file['name'][$ct];
-      if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
-          $mail->addAttachment($uploadfile, $filename);
-          $rfile[] = "Файл $filename прикреплён";
-      } else {
-          $rfile[] = "Не удалось прикрепить файл $filename";
-      }
-    }
-  }
-
-  // Отправка сообщения
-  $mail->isHTML(true);
-  $mail->Subject = $title;
-  $mail->Body = $body;
-
-  $mail->send();
-
-} catch (Exception $e) {
-  $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
+// Кому
+foreach ( $admin_email as  $key => $value ) {
+	$mail->addAddress($);
 }
+// Тема письма
+$mail-> Subject = $form_subject;
+
+// Тело письма
+$body = $message;
+// $mail->isHTML(true); это если прям верстка
+$mail->msgHTML($body);
+
+// Приложения
+if ($_FILES){
+	foreach ( $_FILES['file']['tmp_name'] as  $key => $value) {
+		$mail->addAttachment($value, $_FILES['file']['name'][$key]);
+	}
+}
+$mail->send();
+?>

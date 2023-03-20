@@ -106,7 +106,6 @@
 .guests__item-content-wrap {
   padding-top: 30px;
   padding-bottom: 10px;
-  /* padding-right: 34px; */
   columns: 4;
   column-gap: 1.8em;
   opacity: 0;
@@ -116,6 +115,10 @@
 
 .guests__item-content {
   overflow: hidden;
+}
+
+.is-active {
+  padding-top: 0;
 }
 
 .is-active .guests__item-content-wrap  {
