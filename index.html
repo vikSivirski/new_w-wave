@@ -2649,6 +2649,7 @@
       </div>
       <div class="container">
         <form class="about__form form flex" action="#" method="post">
+          <input type="hidden" name="admin_email[]" value="msne1488@gmail.com">
           <textarea class="about__textarea" placeholder="Что скажете?"></textarea>
           <div class="about__input-wrap">
             <input type="text" class="about__input about__input--name" placeholder="Имя" data-validate-field="name">
@@ -2657,7 +2658,7 @@
             <input type="email" class="about__input about__input--mail" placeholder="Email" data-validate-field="email">
           </div>
           <div class="about__form-send flex">
-            <button type="submit" class="about__form-btn btn-reset">Отправить</button>
+            <button class="about__form-btn btn-reset" type="submit">Отправить</button>
             <label class="about__form-label">
               <input type="checkbox" class="about__form-chekbox visually-hidden" data-validate-field="checkbox">Согласен
               на обработку персональных данных
