@@ -278,18 +278,24 @@ new JustValidate('.about__form', {
     },
   },
 
-  // submitHandler: function (form, values, ajax) {
+  submitHandler: function (form) {
+    let formData = new FormData(form);
 
-  //   ajax({
-  //     url: 'mail.php',
-  //     method: 'POST',
-  //     data: values,
-  //     async: true,
-  //     callback: function(response)  {
-  //       console.log(response)
-  //     }
-  //   });
-  // }
+    let xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          console.log("Отправлено");
+        }
+      }
+    }
+
+    xhr.open('POST', 'mail.php', true);
+    xhr.send(formData);
+
+    form.reset();
+  },
 });
 
 new Accordion('.subheader__accordion');
