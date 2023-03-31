@@ -9,6 +9,7 @@ modalBtn.forEach(function (modalBtn) {
 
     modalWindow.classList.toggle('login--active');
     modalBackground.classList.toggle('popup--active');
+    document.body.classList.toggle('stop-scroll');
   })
 
 })
@@ -17,6 +18,7 @@ modalClosed.addEventListener('click', function () {
 
   modalWindow.classList.remove('login--active');
   modalBackground.classList.remove('popup--active');
+  document.body.classList.remove('stop-scroll');
 
 })
 
